@@ -13,7 +13,7 @@ In this course, we will explore the fundamentals of Genome-Wide Association Stud
 The course is divided into five chapters, starting with the initial overview of the tools and pipeline using toy or example datasets. This section will give you a general idea of the different steps involved in GWAS analysis. The subsequent chapters will focus on the breast cancer case study derived from GEO. These chapters will provide a hands-on experience of analyzing real-world data.
 
 ### Programming Language: 
-Throughout this course, we will primarily use the programming languages Bash and R. It is essential that you have a working knowledge of both languages before carrying out your own analysis. Please ensure that you have the **terminal** application and **R** installed on your laptop to actively participate in the course exercises.
+Throughout this course, we will primarily use the programming languages Bash and R. It is essential that you have a working knowledge of both languages before carrying out your own analysis. Please ensure that you have the **terminal** application and **R** installed on your laptop to actively participate in the course exercises. (need to add how to install R and find terminal.)
 
 **Below is the folder structure in this repository**:
 - **Five .HTML files started with "1_..." to "5_..."**: These are the course materials with instructions, codes and outputs. Double click on them or drag these files to your browser to open.
