@@ -18,7 +18,7 @@ Throughout this course, we will primarily use the programming languages Bash and
 - Open **Terminal**
   - In Windows: Windows has two command-line shells, Command shell and Powershell. But the commands used for these two shells are slightly different. Search for "Powershell" App in Windows menu. If you can't find it, press "windows+X" key and select "Terminal" in the menu appeared. Test whether you can run bash codes by typing `ls` in the terminal window. (Don't use 'Command Prompt'.) Then navigate to the downloaded "bigcare-main" folder by typing: `cd /path/to/bigcare-main`.
   - In macOS: MacOS is able to run bash command line directly. Open the "Terminal" App and navigate to the downloaded "bigcare-main" folder by typing: `cd /path/to/bigcare-main`.
-- Install R and RStudio: You can download both R and RStudio at [https://posit.co/download/rstudio-desktop/]([https://cran.r-project.org/](https://posit.co/download/rstudio-desktop/)). Choose the installation files that are suitable for your laptop system. You have to install R before installing RStudio. 
+- **Install R and RStudio**: You can download both R and RStudio at [https://posit.co/download/rstudio-desktop/]([https://cran.r-project.org/](https://posit.co/download/rstudio-desktop/)). Choose the installation files that are suitable for your laptop system. You have to install R before installing RStudio. 
 
 **Below is the folder structure in this repository**:
 - **Five .HTML files started with "1_..." to "5_..."**: These are the course materials with instructions, codes and outputs. Double click on them or drag these files to your browser to open.
