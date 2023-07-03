@@ -29,3 +29,8 @@ Throughout this course, we will primarily use the programming languages Bash and
 
 - **Tools**: This folder contains programs that we will use in our course.
   - The primary tools are **PLINK** and **IMPUTE2**, both of which are integral to GWAS analysis. The installation packages for these tools can be found in this folder. To be able to use them, you will need to unzip the corresponding program ZIP files that is suitable for your laptop system. Specically, PLINK is compatible with Windows, macOS, and Linux, while IMPUTE2 is only available for macOS and Linux users. However, Eigensoft, another software used in chapter 2, can only be executed on a Linux operating system. (Bioinformatics analyses are usually run on computational servers with Linux system given the large data volumn and high computational power required. So most bioinformatic programs are developed under Linux and only some of them are available to run on personal laptops. )
+    - To call PLINK or IMPUTE2 from terminal, please run this:
+    `cd /path/to/bigcare # change this to where you saved "bigcare-main"
+    ./Tools/PLINK/plink/plink_mac_20230116/plink --help # change the path to where PLINK program is saved`
+    For macOS users, it will prompt you to authorize the program before running. You should open "Setting"-"Privacy and Security", then scroll to the bottom to click "allow" for PLINK to run. After you allow it, it will ask you a second time in the pop-up window whether you want to open it. Click "Open" to run it. You should see the PLINK options appear in the terminal window.
+    
