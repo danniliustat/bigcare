@@ -49,7 +49,7 @@ You can find installation packages for PLINK and IMPUTE2 in your downloaded "big
 
 pop-up window when you try to run program for the first time|  Solarized Ocean
 :-------------------------:|:-------------------------:
-![pop-up1](./image/popup1.png)  |  ![popup2](popup2.png)
+![pop-up1](./image/popup1.png)  |  ![popup2](./image/popup2.png)
 
 Note that Windows system won't be able to run IMPUTE2.
 Similar for Windows system, you need to unzip the package "plink_win64_20230116.zip" with right click->"Extract All...". Then you can call PLINK with /path/to/bigcare-main/Tools/PLINK/plink_win64_20230116/plink.exe.
