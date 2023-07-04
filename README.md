@@ -12,7 +12,7 @@ In this course, we will explore the fundamentals of Genome-Wide Association Stud
 
 The course is divided into five chapters, starting with the initial overview of the tools and pipeline using toy or example datasets. This section will give you a general idea of the different steps involved in GWAS analysis. The subsequent chapters will focus on the breast cancer case study from GEO. These chapters will provide a hands-on experience of analyzing real-world data.
 
-### Programming Language: 
+### Programming Languages: 
 Throughout this course, we will primarily use the programming languages Bash and R. It is essential that you have a working knowledge of both languages before carrying out your own analysis. Please ensure that you have **RStudio** installed on your laptop to actively participate in the course. 
 
 **Install R and RStudio**: 
@@ -38,7 +38,7 @@ Before you install, you need to check whether these tools are compatible to run 
 
 **Installation instructions**
 
-You can find installation packages for PLINK and IMPUTE2 in your downloaded `bigcare-main`-`Tools` folder. You need to locate the corresponding program ZIP files that are suitable for your laptop system then unzip it before use. 
+You can find installation packages for PLINK and IMPUTE2 in your downloaded "bigcare-main/Tools" folder. You need to locate the corresponding program ZIP files that are suitable for your laptop system then unzip it before use. 
 
 
     - To call PLINK or IMPUTE2 from terminal, please run this:
@@ -57,6 +57,5 @@ you can **ONLY** run PLINK program codes. If you would like to try Bash codes, p
 
 - **Data**: This folder includes the necessary data files, including the toy example datasets, case study data, and the corresponding results. We will read data and write outputs to this folder.
 
-- **Tools**: This folder contains programs that we will use in our course.
-  - T The installation packages for these tools can be found in this folder. 
+- **Tools**: This folder contains installation packages for other programs that we will use in our course.
     
