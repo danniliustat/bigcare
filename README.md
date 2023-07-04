@@ -12,6 +12,16 @@ In this course, we will explore the fundamentals of Genome-Wide Association Stud
 
 The course is divided into five chapters, starting with the initial overview of the tools and pipeline using toy or example datasets. This section will give you a general idea of the different steps involved in GWAS analysis. The subsequent chapters will focus on the breast cancer case study from GEO. These chapters will provide a hands-on experience of analyzing real-world data.
 
+### Folder structure:
+- **Five .HTML files for Chapter 1-5 started with "ch1_..." to "ch5_..."**: These are the course materials with instructions, codes and outputs. Double click on them or drag these files to your browser to open.
+  - We will begin with two chapters that provide an overview of the tools and pipeline, using toy or example datasets. These small datasets will allow you to grasp the different steps involved in GWAS analysis. Additionally, these toy examples will enable you to explore the data structure and manipulate the results easily, as they are small and can be easily opened.
+  - The remaining chapters 3-5 will delve into a detailed case study on breast cancer, utilizing a dataset downloaded from the Gene Expression Omnibus (GEO). To facilitate running the analysis on a personal laptop, we have subsetted the genotype data to include only 1000 Single Nucleotide Polymorphisms (SNPs).
+
+- **Data**: This folder includes the necessary data files, including the toy example datasets, case study data, and the corresponding results. We will read data and write outputs to this folder.
+
+- **Tools**: This folder contains installation packages for other programs that we will use in our course.
+    
+
 ### Programming Languages: 
 Throughout this course, we will primarily use the programming languages Bash and R. It is essential that you have a working knowledge of both languages before carrying out your own analysis. Please ensure that you have **RStudio** installed on your laptop to actively participate in the course. 
 
@@ -44,7 +54,7 @@ You can find installation packages for PLINK and IMPUTE2 in your downloaded "big
   PLINK installation ZIP file can be found in "/bigcare/Tools/PLINK/plink_mac_20230116.zip". Unzip this file by double-click and a folder "plink_mac_20230116" will be created. The PLINK program file "plink" is within this folder. You can call PLINK program in RStudio terminal by specifying the absolute path to this "plink" file: `/path/to/bigcare-main/Tools/PLINK/plink_mac_20230116/plink`. Similar for IMPUTE2, you can unzip the installation ZIP file for macOS in "/bigcare-main/Tools/IMPUTE2/impute_v2.3.2_MacOSX_Intel.tgz". IMPUTE2 program can be called with `/path/to/bigcare-main/Tools/IMPUTE2/impute_v2.3.2_MacOSX_Intel/impute2`. An example of codes in RStudio Terminal is as below:
   ```
   cd /path/to/bigcare-main
-  
+  ./Tools/PLINK/plink_mac_20230116/plink --help
   ```
 
   > 👉 macOS needs to authorize programs before use: 
@@ -55,31 +65,14 @@ Fig1. Pop-up window when you try to run program for the first time|  Fig2. Autho
 :-------------------------:|:-------------------------:|:-------------------------:
 ![pop-up1](./image/popup1.png)  |![auth](./image/auth.png)|  ![popup2](./image/popup2.png)
 
-Note that Windows system won't be able to run IMPUTE2.
-
-
-You should modify the above /path/to/bigcare to where your "bigcare-main" folder is.
-
-
-
-
-  - To call PLINK or IMPUTE2 from terminal, please run this:
-    `cd /path/to/bigcare # change this to where you saved "bigcare-main"
-    ./Tools/PLINK/plink/plink_mac_20230116/plink --help # change the path to where PLINK program is saved`
-    For macOS users, it will prompt you to authorize the program before running. You should open "Setting"-"Privacy and Security", then scroll to the bottom to click "allow" for PLINK to run. After you allow it, it will ask you a second time in the pop-up window whether you want to open it. Click "Open" to run it. You should see the PLINK options appear in the terminal window.
 
 - **For Windows users**: You can **ONLY** run PLINK program codes. 
-  PLINK installation file for Windows can be found in "/bigcare/Tools/PLINK/plink_win64_20230116.zip". Unzip "plink_win64_20230116.zip" with right click->"Extract All..." and a folder "plink_win64_20230116" will be created. The PLINK program file "plink.exe" is within this folder. You can call PLINK program by specifying the absolute path to this "plink" file: `/path/to/bigcare-main/Tools/PLINK/plink_win64_20230116/plink.exe`.
+  PLINK installation file for Windows can be found in "/bigcare/Tools/PLINK/plink_win64_20230116.zip". Unzip "plink_win64_20230116.zip" with right click->"Extract All..." and a folder "plink_win64_20230116" will be created. The PLINK program file "plink.exe" is within this folder. You can call PLINK program in RStudio Terminal by specifying the absolute path to this "plink.exe" file: `/path/to/bigcare-main/Tools/PLINK/plink_win64_20230116/plink.exe`. An example of codes in RStudio Terminal is as below:
+  ```
+  cd /path/to/bigcare-main
+  ./Tools/PLINK/plink_win64_20230116/plink.exe --help
+  ```
+**Note: Windows users only run PLINK in RStudio Terminal. For other Bash codes, please still use "Windows Powershell" app.**
 
-If you would like to try Bash codes, please open "Windows Powershell" app and follow the same steps to set the paths. Still, Powershell App won't run PLINK codes, so you'll have to switch between Pwershell and RStudio Terminal.
 
 
-### Below is the folder structure in this repository:
-- **Five .HTML files for Chapter 1-5 started with "ch1_..." to "ch5_..."**: These are the course materials with instructions, codes and outputs. Double click on them or drag these files to your browser to open.
-  - We will begin with two chapters that provide an overview of the tools and pipeline, using toy or example datasets. These small datasets will allow you to grasp the different steps involved in GWAS analysis. Additionally, these toy examples will enable you to explore the data structure and manipulate the results easily, as they are small and can be easily opened.
-  - The remaining chapters 3-5 will delve into a detailed case study on breast cancer, utilizing a dataset downloaded from the Gene Expression Omnibus (GEO). To facilitate running the analysis on a personal laptop, we have subsetted the genotype data to include only 1000 Single Nucleotide Polymorphisms (SNPs).
-
-- **Data**: This folder includes the necessary data files, including the toy example datasets, case study data, and the corresponding results. We will read data and write outputs to this folder.
-
-- **Tools**: This folder contains installation packages for other programs that we will use in our course.
-    
