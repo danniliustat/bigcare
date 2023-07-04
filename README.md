@@ -72,7 +72,7 @@ Fig1. Pop-up window when you try to run program for the first time|  Fig2. Autho
   cd /path/to/bigcare-main
   ./Tools/PLINK/plink_win64_20230116/plink.exe --help
   ```
-**Note: Windows users only run PLINK in RStudio Terminal. For other Bash codes, please still use "Windows Powershell" app.**
+**Note: Windows users can run PLINK ONLY in RStudio Terminal, but not in Powershell. For other Bash codes, please still use "Windows Powershell" app.**
 
 
 
