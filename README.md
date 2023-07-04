@@ -46,6 +46,7 @@ You can find installation packages for PLINK and IMPUTE2 in your downloaded "big
   > 👉 macOS needs to authorize programs before use: 
   >
   > When you try to call PLINK or IMPUTE2 with the above commands, you might get a pop-up window with the following message `“plink” cannot be opened because the developer cannot be verified`. Select "Cancel" and we will authorize PLINK and IMPUTE2 first. Please go to macOS "System Settings"->"Privacy & Security", and scroll down until you see a message `"plink" was blocked from use because it is not from an identified developer`. Click "Allow Anyway" and you will be prompt to enter your Mac username and password. Click "Unlock" and then"Allow Anyway" again, and the previous message will disappear. Then try to run the same codes again in RStudio Terminal. You will get another pop-up window saying macOS cannot verify the developer of “plink”. Are you sure you want to open it?, select "Open" then you can see PLINK or IMPUTE2 commands options show up in Terminal.
+
 pop-up window when you try to run program for the first time|  Solarized Ocean
 :-------------------------:|:-------------------------:
 ![pop-up1](./image/popup1.png)  |  ![popup2](popup2.png)
