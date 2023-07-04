@@ -40,17 +40,18 @@ Before you install, you need to check whether these tools are compatible to run 
 
 You can find installation packages for PLINK and IMPUTE2 in your downloaded "bigcare-main/Tools" folder. You need to locate the corresponding program ZIP files that are suitable for your laptop system then unzip it before use. 
 
-
-    - To call PLINK or IMPUTE2 from terminal, please run this:
+- **For macOS users**: You can run both PLINK and IMPUTE
+  - To call PLINK or IMPUTE2 from terminal, please run this:
     `cd /path/to/bigcare # change this to where you saved "bigcare-main"
     ./Tools/PLINK/plink/plink_mac_20230116/plink --help # change the path to where PLINK program is saved`
     For macOS users, it will prompt you to authorize the program before running. You should open "Setting"-"Privacy and Security", then scroll to the bottom to click "allow" for PLINK to run. After you allow it, it will ask you a second time in the pop-up window whether you want to open it. Click "Open" to run it. You should see the PLINK options appear in the terminal window.
 
-you can **ONLY** run PLINK program codes. If you would like to try Bash codes, please open "Windows Powershell" app and follow the same steps to set the paths. Still, Powershell App won't run PLINK codes, so you'll have to switch between Pwershell and RStudio Terminal.
+- **For Windows users**: You can **ONLY** run PLINK program codes. 
+
+If you would like to try Bash codes, please open "Windows Powershell" app and follow the same steps to set the paths. Still, Powershell App won't run PLINK codes, so you'll have to switch between Pwershell and RStudio Terminal.
 
 
-
-**Below is the folder structure in this repository**:
+### Below is the folder structure in this repository:
 - **Five .HTML files started with "1_..." to "5_..."**: These are the course materials with instructions, codes and outputs. Double click on them or drag these files to your browser to open.
   - We will begin with two chapters that provide an overview of the tools and pipeline, using toy or example datasets. These small datasets will allow you to grasp the different steps involved in GWAS analysis. Additionally, these toy examples will enable you to explore the data structure and manipulate the results easily, as they are small and can be easily opened.
   - The remaining chapters 3-5 will delve into a detailed case study on breast cancer, utilizing a dataset downloaded from the Gene Expression Omnibus (GEO). To facilitate running the analysis on a personal laptop, we have subsetted the genotype data to include only 1000 Single Nucleotide Polymorphisms (SNPs).
