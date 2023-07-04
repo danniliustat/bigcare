@@ -41,7 +41,11 @@ Before you install, you need to check whether these tools are compatible to run 
 You can find installation packages for PLINK and IMPUTE2 in your downloaded "bigcare-main/Tools" folder. You need to locate the corresponding program ZIP files that are suitable for your laptop system then unzip it before use. 
 
 - **For macOS users**: You can run both PLINK and IMPUTE2.
-  PLINK installation ZIP file can be found in "/bigcare/Tools/PLINK/plink_mac_20230116.zip". Unzip this file by double-click and a folder "plink_mac_20230116" will be created. The PLINK program file "plink" is within this folder. You can call PLINK program by specifying the absolute path to this "plink" file: `/path/to/bigcare-main/Tools/PLINK/plink_mac_20230116/plink`. Similar for IMPUTE2, you can unzip the installation ZIP file for macOS in "/bigcare-main/Tools/IMPUTE2/impute_v2.3.2_MacOSX_Intel.tgz". IMPUTE2 program can be called with `/path/to/bigcare-main/Tools/IMPUTE2/impute_v2.3.2_MacOSX_Intel/impute2`. 
+  PLINK installation ZIP file can be found in "/bigcare/Tools/PLINK/plink_mac_20230116.zip". Unzip this file by double-click and a folder "plink_mac_20230116" will be created. The PLINK program file "plink" is within this folder. You can call PLINK program in RStudio terminal by specifying the absolute path to this "plink" file: `/path/to/bigcare-main/Tools/PLINK/plink_mac_20230116/plink`. Similar for IMPUTE2, you can unzip the installation ZIP file for macOS in "/bigcare-main/Tools/IMPUTE2/impute_v2.3.2_MacOSX_Intel.tgz". IMPUTE2 program can be called with `/path/to/bigcare-main/Tools/IMPUTE2/impute_v2.3.2_MacOSX_Intel/impute2`. An example of codes in RStudio Terminal is as below:
+  ```
+  cd /path/to/bigcare-main
+  
+  ```
 
   > 👉 macOS needs to authorize programs before use: 
   >
@@ -52,7 +56,7 @@ Fig1. Pop-up window when you try to run program for the first time|  Fig2. Autho
 ![pop-up1](./image/popup1.png)  |![auth](./image/auth.png)|  ![popup2](./image/popup2.png)
 
 Note that Windows system won't be able to run IMPUTE2.
-Similar for Windows system, you need to unzip the package "plink_win64_20230116.zip" with right click->"Extract All...". Then you can call PLINK with /path/to/bigcare-main/Tools/PLINK/plink_win64_20230116/plink.exe.
+
 
 You should modify the above /path/to/bigcare to where your "bigcare-main" folder is.
 
@@ -65,6 +69,7 @@ You should modify the above /path/to/bigcare to where your "bigcare-main" folder
     For macOS users, it will prompt you to authorize the program before running. You should open "Setting"-"Privacy and Security", then scroll to the bottom to click "allow" for PLINK to run. After you allow it, it will ask you a second time in the pop-up window whether you want to open it. Click "Open" to run it. You should see the PLINK options appear in the terminal window.
 
 - **For Windows users**: You can **ONLY** run PLINK program codes. 
+  PLINK installation file for Windows can be found in "/bigcare/Tools/PLINK/plink_win64_20230116.zip". Unzip "plink_win64_20230116.zip" with right click->"Extract All..." and a folder "plink_win64_20230116" will be created. The PLINK program file "plink.exe" is within this folder. You can call PLINK program by specifying the absolute path to this "plink" file: `/path/to/bigcare-main/Tools/PLINK/plink_win64_20230116/plink.exe`.
 
 If you would like to try Bash codes, please open "Windows Powershell" app and follow the same steps to set the paths. Still, Powershell App won't run PLINK codes, so you'll have to switch between Pwershell and RStudio Terminal.
 
