@@ -14599,7 +14599,9 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </ol>
 <p>The data used for this example is a toy genotype data containing 5 random SNPs and a random phenotype data with covariates.</p>
 <p>We use both bash and R codes in this notebook. The type of programming language is labeled at the top of each code cell.</p>
-
+<div class="alert alert-block alert-warning">
+<b> Special notes for Windows users: Windows has two command-line shells, Command shell and Windows Powershell. Command shell is specific to Windows system and can be run from RStudio Terminal or in "Command Prompt" App, but the lanugage it uses is NOT the same as Bash! Powershell App is the only place to run Bash commands in Windows. Therefore if you are Windows users and use RStudio for this course, you can't run bash codes such as "head" or "awk" from RStudio Terminal, you can **ONLY** run PLINK program codes. If you would like to try Bash codes, please open "Windows Powershell" app and follow the same steps to set the paths. Still, Powershell App won't run PLINK codes, so you'll have to switch between Pwershell and RStudio Terminal.</b>
+</div>
 </div>
 </div>
 </div>
@@ -14610,7 +14612,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Environment-Setting">Environment Setting<a class="anchor-link" href="#Environment-Setting">&#182;</a></h1><p>Before we can run any analysis, we need to set the working directory path to the downloaded "bigcare-main" folder in both Terminal and R. Below are the codes to setup paths at both places. These paths have to be setup correctly at first, otherwise we can't locate the correct input files.</p>
+<h1 id="Environment-Setting">Environment Setting<a class="anchor-link" href="#Environment-Setting">&#182;</a></h1><p>Before we can run any analysis, we need to set the working directory path to the downloaded "bigcare-main" folder for both Terminal and Console in RStudio. Below are the codes to setup paths at both places. These paths have to be setup correctly at first, otherwise we can't locate the correct input files.</p>
 
 </div>
 </div>
@@ -14624,11 +14626,11 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span># change the paths to where you saved &quot;bigcare-main&quot;
-## bash codes- run in terminal
+## run in Terminal
 mydir=&quot;/path/to/bigcare-main&quot;
 cd $mydir
 
-# R codes- run in R
+# R codes- run in R Console
 setwd(&quot;/path/to/bigcare-main&quot;)
 </pre></div>
 
@@ -14670,7 +14672,7 @@ https://www.rcac.purdue.edu/knowledge/biocontainers
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Softwares">Softwares<a class="anchor-link" href="#Softwares">&#182;</a></h1>
+<h1 id="GWAS-Tools">GWAS Tools<a class="anchor-link" href="#GWAS-Tools">&#182;</a></h1>
 </div>
 </div>
 </div>
@@ -14681,9 +14683,9 @@ https://www.rcac.purdue.edu/knowledge/biocontainers
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>We will use two main software in this notebook, <strong>PLINK</strong> and <strong>IMPUTE2</strong>.</p>
-<p><strong>PLINK</strong> is used for quality control and perform association test for large scale genotype data. You can download PLINK program using <a href="https://zzz.bwh.harvard.edu/plink/download.shtml">this link</a>. Download the .zip file suitable for your laptop system and unzip it to call the <code>plink</code> program in the folder.</p>
-<p><strong>IMPUTE2</strong> is used for genotype imputation and haplotype phasing. You can download its program using <a href="https://mathgen.stats.ox.ac.uk/impute/impute_v2.html#download">this link</a>. IMPUTE2 program is only available to run in Linux or macOS system. You need to unzip the downloaded file in a terminal window using <code>tar -zxvf impute_v2*.tgz</code>. You will also need to download the required reference genome linked in the above link.</p>
+<p>We will use two main program tools in this notebook, <strong>PLINK</strong> and <strong>IMPUTE2</strong>.</p>
+<p><strong>PLINK</strong> is used for quality control and perform association test for large scale genotype data. You can download PLINK program using <a href="https://zzz.bwh.harvard.edu/plink/download.shtml">this link</a>. Download the .zip file or find the .zip files suitable for your laptop system in "bigcare-main/Tools/PLINK" and unzip it to call the <code>plink</code> program in the folder.</p>
+<p><strong>IMPUTE2</strong> is used for genotype imputation and haplotype phasing. You can download its program using <a href="https://mathgen.stats.ox.ac.uk/impute/impute_v2.html#download">this link</a>. IMPUTE2 program is only available to run in Linux or macOS system. You can find the zipped installation file in "bigcare-main/Tools/IMPUTE2". If you want to perform imputation for your own data, you also need to download the required reference genome from the above link. But in this notebook will only use the example genome.</p>
 
 </div>
 </div>
@@ -14696,7 +14698,7 @@ https://www.rcac.purdue.edu/knowledge/biocontainers
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <div class="alert alert-block alert-warning">
-<b>Important: If you want to run these two programs on your laptop, please make sure you have downloaded and unzipped the installation packages in "/bigcare-main/Tools". We will directly call them from this path later. </b>
+<b>Important: If you want to run these two programs on your laptop, please make sure you have unzipped the installation packages in "./bigcare-main/Tools" that is suitable for your laptop systerm. We will directly call PLINK and IMPUTE2 programs using relative path. </b>
 </div>
 </div>
 </div>
@@ -14708,9 +14710,12 @@ https://www.rcac.purdue.edu/knowledge/biocontainers
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>For example, my computer is macOS system so I can run both PLINK and IMPUTE2. I unzip the plink package "plink_mac_20230116.zip" under "/bigcare-main/Tools/PLINK/" and I can call PLINK program by specifying its path <code>/path/to/bigcare-main/Tools/PLINK/plink_mac_20230116/plink</code>.</p>
-<p>Similar for IMPUTE2, I unzip "impute_v2.3.2_MacOSX_Intel.tgz" under "/bigcare-main/Tools/IMPUTE2/" so I can call IMPUTE2 program with <code>/path/to/bigcare-main/Tools/IMPUTE2/impute_v2.3.2_MacOSX_Intel/impute2.</code></p>
-<p>You should modify the above paths to where your "bigcare-main" folder is.</p>
+<p>For example, my computer is macOS system so I can run both PLINK and IMPUTE2. After I downloaded "bigcare-main" folder, I open <code>./Tools/PLINK</code> and unzip the plink package for macOS: "plink_mac_20230116.zip". A folder "plink_mac_20230116" will be created which contains a program file called "plink". Then, I can call PLINK program by specifying the absolute path of this "plink" program: <code>/path/to/bigcare-main/Tools/PLINK/plink_mac_20230116/plink</code>. Similar for Windows system, you need to unzip the package "plink_win64_20230116.zip" with right click-&gt;"Extract All...". Then you can call PLINK with <code>/path/to/bigcare-main/Tools/PLINK/plink_win64_20230116/plink.exe</code>.</p>
+<p>Similar for IMPUTE2, I unzip "impute_v2.3.2_MacOSX_Intel.tgz" for macOS under "./bigcare-main/Tools/IMPUTE2/". And I can call IMPUTE2 program with <code>/path/to/bigcare-main/Tools/IMPUTE2/impute_v2.3.2_MacOSX_Intel/impute2</code>. Note that Windows system won't be able to run IMPUTE2.</p>
+<p>You should modify the above <code>/path/to/bigcare</code> to where your "bigcare-main" folder is.</p>
+<div class="alert alert-block alert-warning">
+<b>However, macOS users need to go through additional steps to authorize PLINK and IMPUTE2 programs before you can call them! See below.</b>
+</div><p>When you try to call PLINK or IMPUTE2 with the above commands, you might get a pop-up window with the following message <code>“plink” cannot be opened because the developer cannot be verified.</code>. Select "Cancel" and we will authorize PLINK first. Please go to macOS "System Settings"-&gt;"Privacy &amp; Security", and scroll down until you see a message <code>"plink" was blocked from use because it is not from an identified developer.</code>. Click "Allow Anyway" and you will be prompt to enter your Mac username and password. Click "Unlock" and then"Allow Anyway" again, and the previous message will disappear. Then try to run the same codes again in RStudio Terminal. You will get another pop-up window saying <code>macOS cannot verify the developer of “plink”. Are you sure you want to open it?</code>, select "Open" then you can see PLINK or IMPUTE2 commands options show up in Terminal.</p>
 
 </div>
 </div>
@@ -14823,7 +14828,8 @@ https://www.rcac.purdue.edu/knowledge/biocontainers
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+<div class=" highlight hl-sos"><pre><span></span># bash codes- run in Terminal
+# Windows user need to run in Powershell App 
 head ./Data/QC/5SNPs.ped
 </pre></div>
 
@@ -14903,6 +14909,7 @@ https://www.rcac.purdue.edu/knowledge/biocontainers
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+# Windows user need to run in Powershell App 
 head ./Data/QC/5SNPs.map
 </pre></div>
 
@@ -14993,9 +15000,15 @@ head ./Data/QC/5SNPs.map
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+<div class=" highlight hl-sos"><pre><span></span># both Mac and Windows can run in Terminal
 # modify the path to &quot;plink&quot; program
-/path/to/bigcare-main/Tools/PLINK/plink_mac_20230116/plink \
+
+# for macoS users
+./Tools/PLINK/plink_mac_20230116/plink \
+--noweb --file ./Data/QC/5SNPs --missing --out ./Data/QC/younameit
+
+# for windows users
+./Tools/PLINK/plink_win64_20230116/plink.exe \
 --noweb --file ./Data/QC/5SNPs --missing --out ./Data/QC/younameit
 </pre></div>
 
@@ -15082,7 +15095,8 @@ variant-based missing data report written to ./Data/QC/younameit.lmiss.
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+<div class=" highlight hl-sos"><pre><span></span># bash codes- run in Terminal
+# Windows user need to run in Powershell App 
 head ./Data/QC/younameit.imiss
 </pre></div>
 
@@ -15150,6 +15164,7 @@ head ./Data/QC/younameit.imiss
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+# Windows user need to run in Powershell App 
 head ./Data/QC/younameit.lmiss
 </pre></div>
 
@@ -15220,9 +15235,15 @@ head ./Data/QC/younameit.lmiss
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+<div class=" highlight hl-sos"><pre><span></span># both Mac and Windows can run in Terminal
 # modify the path to &quot;plink&quot; program
-/path/to/bigcare-main/Tools/PLINK/plink_mac_20230116/plink \
+
+# macOS user
+./Tools/PLINK/plink_mac_20230116/plink \
+--noweb --file ./Data/QC/5SNPs --freq --out ./Data/QC/younameit
+
+# Windows user
+./Tools/PLINK/plink_win64_20230116/plink.exe \
 --noweb --file ./Data/QC/5SNPs --freq --out ./Data/QC/younameit
 </pre></div>
 
@@ -15309,6 +15330,7 @@ Total genotyping rate is 0.976744.
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+# Windows user need to run in Powershell App
 head ./Data/QC/younameit.frq
 </pre></div>
 
@@ -15379,9 +15401,15 @@ head ./Data/QC/younameit.frq
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+<div class=" highlight hl-sos"><pre><span></span># both Mac and Windows can run in Terminal
 # modify the path to &quot;plink&quot; program
-/path/to/bigcare-main/Tools/PLINK/plink_mac_20230116/plink \
+
+# macOS user
+./Tools/PLINK/plink_mac_20230116/plink \
+--noweb --file ./Data/QC/5SNPs --hardy --out ./Data/QC/younameit
+
+# Windows user
+./Tools/PLINK/plink_win64_20230116/plink.exe \
 --noweb --file ./Data/QC/5SNPs --hardy --out ./Data/QC/younameit
 </pre></div>
 
@@ -15473,6 +15501,7 @@ Total genotyping rate is 0.976744.
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+# Windows user need to run in Powershell App
 head ./Data/QC/younameit.hwe
 </pre></div>
 
@@ -15565,9 +15594,16 @@ head ./Data/QC/younameit.hwe
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+<div class=" highlight hl-sos"><pre><span></span># both Mac and Windows can run in Terminal
 # modify the path to &quot;plink&quot; program
-/path/to/bigcare-main/Tools/PLINK/plink_mac_20230116/plink \
+
+# macOS user
+./Tools/PLINK/plink_mac_20230116/plink \
+--noweb --file ./Data/QC/5SNPs \
+--mind 0.1 --geno 0.1 --maf 0.05 --hwe 0.001 --recode --out ./Data/QC/younameit
+
+# Windows user
+./Tools/PLINK/plink_win64_20230116/plink.exe \
 --noweb --file ./Data/QC/5SNPs \
 --mind 0.1 --geno 0.1 --maf 0.05 --hwe 0.001 --recode --out ./Data/QC/younameit
 </pre></div>
@@ -15697,9 +15733,15 @@ Note: No phenotypes present.
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+<div class=" highlight hl-sos"><pre><span></span># both Mac and Windows can run in Terminal
 # modify the path to &quot;plink&quot; program
-/path/to/bigcare-main/Tools/PLINK/plink_mac_20230116/plink \
+
+# macOS user
+./Tools/PLINK/plink_mac_20230116/plink \
+--noweb --file ./Data/QC/5SNPs --genome --out ./Data/QC/younameit
+
+# Windows user
+./Tools/PLINK/plink_win64_20230116/plink.exe \
 --noweb --file ./Data/QC/5SNPs --genome --out ./Data/QC/younameit
 </pre></div>
 
@@ -15809,6 +15851,7 @@ Finished writing ./Data/QC/younameit.genome .
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+# Windows user need to run in Powershell App
 head ./Data/QC/younameit.genome
 </pre></div>
 
@@ -15894,8 +15937,11 @@ head ./Data/QC/younameit.genome
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+# IMPUTE2 only works for macOS or Linux users, Windows users can&#39;t run it
+
+# macOS user only
 # modify the path to &quot;impute2&quot; program
-/path/to/bigcare-main/Tools/IMPUTE2/impute_v2.3.2_MacOSX_Intel/impute2 \
+./Tools/IMPUTE2/impute_v2.3.2_MacOSX_Intel/impute2 \
 -m ./Data/impute2_example/example.chr22.map \
 -h ./Data/impute2_example/example.chr22.1kG.haps \
 -l ./Data/impute2_example/example.chr22.1kG.legend \
@@ -16261,6 +16307,7 @@ In the two genotype columns for each SNP, missing data is represented by 0.</li>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+# Windows user need to run in Powershell App
 cp ./Data/PC/genotype_1k.map ./Data/PC/genotype_1k.pedsnp
 </pre></div>
 
@@ -16289,7 +16336,7 @@ cp ./Data/PC/genotype_1k.map ./Data/PC/genotype_1k.pedsnp
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 set.seed(1)
 group&lt;-rep(1,344)
 idx&lt;-sample(344,170)
@@ -16354,6 +16401,7 @@ head(group)
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+# Windows user need to run in Powershell App
 awk &#39;{print $1,$2,$3,$4,$5}&#39; ./Data/PC/genotype_1k.ped &gt; ./Data/PC/genotype_ind.txt
 paste -d&#39; &#39; ./Data/PC/genotype_ind.txt ./Data/PC/group.txt&gt; ./Data/PC/genotype_1k.pedind
 </pre></div>
@@ -16382,7 +16430,7 @@ paste -d&#39; &#39; ./Data/PC/genotype_ind.txt ./Data/PC/group.txt&gt; ./Data/PC
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <div class="alert alert-block alert-warning">
-<b>Important: EIGENSTRAT perl scripts are only available to run in Linux system!</b>
+<b>Important: EIGENSTRAT perl scripts are only available to run in Linux system! We will just show you the codes and outputs here.</b>
 </div>
 </div>
 </div>
@@ -16428,9 +16476,8 @@ paste -d&#39; &#39; ./Data/PC/genotype_ind.txt ./Data/PC/group.txt&gt; ./Data/PC
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+<div class=" highlight hl-sos"><pre><span></span># bash codes-can&#39;t run on either macOS or Windows
 # this can only be run under Linux system or on computing server
-#module load gnuplot
 ./Tools/eigensoft-master/bin/smartpca.perl \
 -i ./Data/PC/genotype_1k.ped -a ./Data/PC/genotype_1k.pedsnp -b ./Data/PC/genotype_1k.pedind \
 -k 10 -o ./Data/PC/genotype_1k.pca -p ./Data/PC/genotype_1k.plot \
@@ -16504,6 +16551,7 @@ evec2pca-ped.perl 10 ./Data/PC/genotype_1k.pca.evec ./Data/PC/genotype_1k.pedind
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+# Windows user need to run in Powershell App
 awk &#39;NR &gt;= 2 &amp;&amp; NR &lt;= 11 {print}&#39; ./Data/PC/genotype_1k.pca &gt; ./Data/PC/pc_eig.txt
 </pre></div>
 
@@ -16520,7 +16568,7 @@ awk &#39;NR &gt;= 2 &amp;&amp; NR &lt;= 11 {print}&#39; ./Data/PC/genotype_1k.pc
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 # generate plot in R
 pc_eig &lt;- read.table(&quot;./Data/PC/pc_eig.txt&quot;,header=F) # read in eigenvalue
 names(pc_eig) &lt;- &quot;eig&quot;
@@ -16853,6 +16901,7 @@ class="
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+# Windows user need to run in Powershell App
 tail -n+12 ./Data/PC/genotype_1k.pca &gt; ./Data/PC/pc.txt
 </pre></div>
 
@@ -16884,7 +16933,7 @@ tail -n+12 ./Data/PC/genotype_1k.pca &gt; ./Data/PC/pc.txt
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 y=read.table(&quot;./Data/PC/r_met.txt&quot;) #read phenotype data
 pc=read.table(&quot;./Data/PC/pc.txt&quot;) #read pc data
 y=as.matrix(y) #create a matrix from phenotype data
@@ -17085,8 +17134,14 @@ Col 4: Base-pair position (bp units)
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
-/path/to/bigcare-main/Tools/PLINK/plink_mac_20230116/plink \
+<div class=" highlight hl-sos"><pre><span></span># both Mac and Windows can run in Terminal
+
+# macOS user
+./Tools/PLINK/plink_mac_20230116/plink \
+--noweb --file ./Data/Assoc/5SNPs --assoc --pheno ./Data/Assoc/conty.txt --out ./Data/Assoc/younameit.conty
+
+# Windows user
+./Tools/PLINK/plink_win64_20230116/plink.exe \
 --noweb --file ./Data/Assoc/5SNPs --assoc --pheno ./Data/Assoc/conty.txt --out ./Data/Assoc/younameit.conty
 </pre></div>
 
@@ -17186,6 +17241,7 @@ P        Wald test asymptotic p-value</code></pre>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+# Windows user need to run in Powershell App
 head ./Data/Assoc/younameit.conty.qassoc
 </pre></div>
 
@@ -17297,8 +17353,14 @@ head ./Data/Assoc/younameit.conty.qassoc
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
-/path/to/bigcare-main/Tools/PLINK/plink_mac_20230116/plink \
+<div class=" highlight hl-sos"><pre><span></span># both Mac and Windows can run in Terminal
+
+# macOS user
+./Tools/PLINK/plink_mac_20230116/plink \
+--noweb --file ./Data/Assoc/5SNPs --assoc --pheno ./Data/Assoc/biny.txt --out ./Data/Assoc/younameit.biny
+
+# Windows user
+./Tools/PLINK/plink_win64_20230116/plink.exe \
 --noweb --file ./Data/Assoc/5SNPs --assoc --pheno ./Data/Assoc/biny.txt --out ./Data/Assoc/younameit.biny
 </pre></div>
 
@@ -17393,6 +17455,7 @@ done.
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+# Windows user need to run in Powershell App
 head ./Data/Assoc/younameit.biny.assoc
 </pre></div>
 
@@ -17509,7 +17572,7 @@ head ./Data/Assoc/younameit.biny.assoc
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span>## R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span>## R codes- run in R Console
 # Read phenotype data and covariates data
 pheno=read.table(&quot;./Data/Assoc/conty_pheno.txt&quot;) #read phenotype data
 covar=read.table(&quot;./Data/Assoc/conty_covar.txt&quot;) #read covariates data
@@ -17545,7 +17608,7 @@ p=dim(pheno)[2] #number of traits
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 fit=list() #create an empty list
 residpheno=matrix(0, n, p) #create an empty matrix
 for (i in 1:p){
@@ -17581,8 +17644,9 @@ write.table(residpheno, &quot;./Data/Assoc/resid_phenotype.txt&quot;, row.names=
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
-paste ./Data/Assoc/famID.txt ./Data/Assoc/sampleID.txt ./Data/Assoc/resid_phenotype.txt \
-&gt; ./Data/Assoc/resid_phenotype_assoc.txt
+# Windows user need to run in Powershell App
+paste ./Data/Assoc/famID.txt ./Data/Assoc/sampleID.txt \
+./Data/Assoc/resid_phenotype.txt &gt; ./Data/Assoc/resid_phenotype_assoc.txt
 </pre></div>
 
      </div>
@@ -17633,8 +17697,15 @@ paste ./Data/Assoc/famID.txt ./Data/Assoc/sampleID.txt ./Data/Assoc/resid_phenot
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
-/path/to/bigcare-main/Tools/PLINK/plink_mac_20230116/plink \
+<div class=" highlight hl-sos"><pre><span></span># both Mac and Windows can run in Terminal
+
+# macOS user
+./Tools/PLINK/plink_mac_20230116/plink \
+--noweb --file ./Data/Assoc/5SNPs --assoc --pheno ./Data/Assoc/resid_phenotype_assoc.txt \
+--out ./Data/Assoc/younameit_resid
+
+# Windows user
+./Tools/PLINK/plink_win64_20230116/plink.exe \
 --noweb --file ./Data/Assoc/5SNPs --assoc --pheno ./Data/Assoc/resid_phenotype_assoc.txt \
 --out ./Data/Assoc/younameit_resid
 </pre></div>
@@ -17705,7 +17776,8 @@ Writing QT --assoc report to ./Data/Assoc/younameit_resid.qassoc ... done.
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
-### association results
+# Windows user need to run in Powershell App
+### check association results
 head ./Data/Assoc/younameit_resid.qassoc
 </pre></div>
 
