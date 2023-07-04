@@ -14616,6 +14616,19 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div class="alert alert-block alert-warning">
+<b> Special notes for Windows users: Windows has two command-line shells, Command shell and Windows Powershell. Command shell is specific to Windows system and can be run from RStudio Terminal or in "Command Prompt" App, but the lanugage it uses is NOT the same as Bash! Powershell App is the only place to run Bash commands in Windows. Therefore if you are Windows users and use RStudio for this course, you can't run bash codes such as "head" or "awk" from RStudio Terminal, you can **ONLY** run PLINK program codes. If you would like to try Bash codes, please open "Windows Powershell" app and follow the same steps to set the paths. Still, Powershell App won't run PLINK codes, so you'll have to switch between Pwershell and RStudio Terminal.</b>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Environment-setting-and-packages">Environment setting and packages<a class="anchor-link" href="#Environment-setting-and-packages">&#182;</a></h1>
 </div>
 </div>
@@ -14641,7 +14654,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span># change the path below to where you saved &quot;bigcare-main&quot; folder
-## bash codes- run in terminal
+## run in R Terminal
 mydir=&quot;/path/to/bigcare-main/Data/case_data&quot;
 cd $mydir
 </pre></div>
@@ -14683,7 +14696,7 @@ https://www.rcac.purdue.edu/knowledge/biocontainers
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 setwd(&quot;/path/to/bigcare-main/Data/case_data&quot;)
 </pre></div>
 
@@ -14736,7 +14749,7 @@ https://www.rcac.purdue.edu/knowledge/biocontainers
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 #install.packages(&quot;data.table&quot;)
 #install.packages(&quot;qqman&quot;)
 #install.packages(&quot;png&quot;)
@@ -14774,7 +14787,7 @@ https://www.rcac.purdue.edu/knowledge/biocontainers
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 #load R packages
 library(data.table)
 library(GEOquery)
@@ -14959,6 +14972,7 @@ As of 2021, QCGWAS has been replaced by GWASinspector
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+# Windows user need to run in Powershell App 
 # data_path=/path/to/bigcare-main/Data/case_data
 # wget ftp://ftp.ncbi.nlm.nih.gov/geo/series/GSE129nnn/GSE129162/matrix/GSE129162_series_matrix.txt.gz -P $data_path
 # gunzip $data_path/*gz #this code replaces the .gz file with an uncompressed file
@@ -15017,6 +15031,7 @@ As of 2021, QCGWAS has been replaced by GWASinspector
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+# Windows user need to run in Powershell App 
 # data_path=/path/to/bigcare-main/Data/case_data
 # wget https://ftp.ncbi.nlm.nih.gov/geo/series/GSE129nnn/GSE129162/suppl/GSE129162%5FPlate%5F1%5FFull%5FData%5FTable%2Etxt%2Egz -P $data_path
 # wget https://ftp.ncbi.nlm.nih.gov/geo/series/GSE129nnn/GSE129162/suppl/GSE129162%5FPlate%5F2%5FFull%5FData%5FTable%2Etxt%2Egz -P $data_path
@@ -15109,6 +15124,7 @@ As of 2021, QCGWAS has been replaced by GWASinspector
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+# Windows user need to run in Powershell App 
 #platform
 head GPL16104-1240.txt
 </pre></div>
@@ -15159,6 +15175,7 @@ rs35144699	0	0	rs35144699
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+# Windows user need to run in Powershell App 
 # genotype
 head -n 2 GSE129162_1k_geno1.txt
 </pre></div>
@@ -15201,6 +15218,7 @@ head -n 2 GSE129162_1k_geno1.txt
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+# Windows user need to run in Powershell App 
 head sampleID.txt
 </pre></div>
 
@@ -15278,7 +15296,7 @@ head sampleID.txt
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 my_gse &lt;-&quot;GSE129162&quot;
 my_pheno &lt;- getGEO(GEO=my_gse, filename=&quot;GSE129162_series_matrix.txt&quot;, getGPL=FALSE)
 </pre></div>
@@ -15308,7 +15326,7 @@ my_pheno &lt;- getGEO(GEO=my_gse, filename=&quot;GSE129162_series_matrix.txt&quo
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 ls()
 </pre></div>
 
@@ -15367,7 +15385,7 @@ ls()
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 class(my_pheno)
 show(my_pheno)
 </pre></div>
@@ -15444,7 +15462,7 @@ Annotation: GPL16104
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 head(pData(my_pheno))
 </pre></div>
 
@@ -15512,7 +15530,7 @@ head(pData(my_pheno))
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 colnames(pData(my_pheno))
 </pre></div>
 
@@ -15571,7 +15589,7 @@ colnames(pData(my_pheno))
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 pheno_var&lt;- c(&#39;title&#39;,&#39;(e)-a-oh-tam:ch1&#39;,&#39;(e)-endoxifen:ch1&#39;,
               &#39;(z)-4-oh-tam + 3-oh-tam:ch1&#39;,&#39;(z)-a-oh-tam:ch1&#39;,
               &#39;(z)-endoxifen + 3-oh-ndm-tam:ch1&#39;,&#39;4-oh-ndm-tam-gluc:ch1&#39;,
@@ -15646,7 +15664,7 @@ head(phenotype)
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 # explore each one
 head(pData(my_pheno)$characteristics_ch1.3)
 </pre></div>
@@ -15706,7 +15724,7 @@ head(pData(my_pheno)$characteristics_ch1.3)
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 apply(phenotype,2,class)
 </pre></div>
 
@@ -15767,7 +15785,7 @@ apply(phenotype,2,class)
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 #change to numeric, warning because of NA
 phenotype &lt;- cbind(phenotype[,1], apply(phenotype[,2:15],2,as.numeric))
 # rename, as column names don&#39;t allow special character and numer as start
@@ -15881,7 +15899,7 @@ Warning message in apply(phenotype[, 2:15], 2, as.numeric):
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 # Read data
 phenotype=fread(&quot;phenotype.txt&quot;, header=T)
 head(phenotype)
@@ -15952,7 +15970,7 @@ head(phenotype)
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 #only select necessary pheno
 pheno_mr &lt;- phenotype[,c(&#39;sample_ID&#39;,&#39;z.4.oh.tam_3.oh.tam&#39;,&#39;tamoxifen&#39;,&#39;z.endoxifen_ratio&#39;)]
 names(pheno_mr) &lt;- c(&quot;id&quot;,&quot;z4&quot;, &quot;tam&quot;,&quot;mr&quot;)
@@ -16011,7 +16029,7 @@ head(pheno_mr)
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 fwrite(pheno_mr, &quot;pheno_mr.txt&quot;, sep=&quot;\t&quot;,quote=F,row.name=F, col.name=T,na=&quot;NA&quot;)
 fwrite(pheno_mr[,&quot;id&quot;],&quot;sampleID.txt&quot;,sep=&quot;\t&quot;,quote=F,row.name=F, col.name=T,na=&quot;NA&quot;)
 </pre></div>
@@ -16041,7 +16059,7 @@ fwrite(pheno_mr[,&quot;id&quot;],&quot;sampleID.txt&quot;,sep=&quot;\t&quot;,quo
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 hist(pheno_mr$z4[!is.na(pheno_mr$z4)],xlab=&quot;Z-4-oh-Tam&quot;,main=&quot;histogram of Z-4-oh-Tam&quot;)
 </pre></div>
 
@@ -16309,7 +16327,7 @@ class="
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 hist(pheno_mr$tam[!is.na(pheno_mr$tam)],xlab=&quot;tamoxifen&quot;,main=&quot;histogram of tamoxifen&quot;)
 </pre></div>
 
@@ -16565,7 +16583,7 @@ class="
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 hist(pheno_mr$mr[!is.na(pheno_mr$mr)],xlab=&quot;z-endoxifen ratio&quot;,main=&quot;histogram of z-endoxifen ratio&quot;)
 </pre></div>
 
@@ -16861,7 +16879,7 @@ class="
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 pheno_mr &lt;- read.table(&quot;pheno_mr.txt&quot;,header=T)
 pheno0=pheno_mr[,-1] #remove sample ID (Col 1)
 n=dim(pheno0)[1] #sample size
@@ -16884,7 +16902,7 @@ for (i in 1:p){
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 # view the data
 head(pheno0)
 </pre></div>
@@ -16966,7 +16984,7 @@ head(pheno0)
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 #Violation of this assumption can severely affect the power and type I error 
 shapiro.test(pheno0$z4[!is.na(pheno0$z4)])
 shapiro.test(pheno0$tam[!is.na(pheno0$tam)])
@@ -17078,7 +17096,7 @@ W = 0.95304, p-value = 5.707e-06
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 # We will do a rank-based inverse normal transformation 
 pheno0$z4 &lt;- log2(pheno0$z4+1)
 pheno0$tam &lt;- log2(pheno0$tam+1)
@@ -17123,7 +17141,7 @@ write.table(pheno0, &quot;phenotype0.txt&quot;, row.names=F, col.names=F, quote=
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 # age&lt;- sample(22:95, size=192,replace=TRUE)
 # age
 # fwrite(as.matrix(age),&quot;age.txt&quot;,quote=F, row.names=F,col.names=F)
@@ -17154,7 +17172,7 @@ write.table(pheno0, &quot;phenotype0.txt&quot;, row.names=F, col.names=F, quote=
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 # Read phenotype data and covariates data
 pheno=fread(&quot;phenotype0.txt&quot;) #read phenotype data
 covar=read.table(&quot;age.txt&quot;) #read covariates data
@@ -17228,7 +17246,7 @@ p
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 fit=list() #create an empty list
 residpheno=matrix(0, n, p) #create an empty matrix
 for (i in 1:p){
@@ -17327,6 +17345,7 @@ write.table(residpheno, &quot;resid_phenotype0.txt&quot;, row.names=F, col.names
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+# Windows user need to run in Powershell App 
 ### Individual ID: sampleID.txt (in Linux)
 awk &#39;NR&gt;=2 {print}&#39; sampleID.txt &gt; samID.txt
 head samID.txt
@@ -17389,7 +17408,7 @@ head samID.txt
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 samID=read.table(&quot;samID.txt&quot;)#read sample ID
 samID=as.matrix(samID) #create a matrix from samID
 len=length(samID) #sample size
@@ -17435,6 +17454,7 @@ write.table(pheno, &quot;pheno.txt&quot;, row.names=F, col.names=F, quote=F, sep
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+# Windows user need to run in Powershell App 
 head -n 2 GSE129162_1k_geno1.txt
 </pre></div>
 
@@ -17489,6 +17509,7 @@ head -n 2 GSE129162_1k_geno1.txt
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span>### bash codes- run in terminal
+# Windows user need to run in Powershell App 
 ### Genotype only 
 ## from Row 2, print every 4th columns starting from column 11
 awk &#39;NR&gt;=2 {for(i=11;i&lt;=NF; i+=4) {printf &quot;%s &quot;, $i} printf &quot;\n&quot;}&#39; \
@@ -17523,7 +17544,7 @@ GSE129162_1k_geno2.txt &gt; geno_1k_ready2.txt
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 # Transpose genotype data (using R)
 genodata1=fread(&quot;geno_1k_ready1.txt&quot;,header=F) #read genotype data
 genodata2= fread(&quot;geno_1k_ready2.txt&quot;,header=F)
@@ -17637,7 +17658,7 @@ head(genodata1)
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 genodata1=as.matrix(genodata1) #create a matrix from the genotype data
 genodata2=as.matrix(genodata2)
 
@@ -17706,6 +17727,7 @@ dim(genodata)
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+# Windows user need to run in Powershell App 
 # Replace &#39;A&#39; with &#39;A &#39;, &#39;B&#39; with &#39;G &#39;, NC(NoCall) with &#39;0 &#39; in genodata (in Linux)
 sed -i -e &#39;s/A/A /g&#39; genodata_1k.txt
 sed -i -e &#39;s/B/G /g&#39; genodata_1k.txt
@@ -17738,6 +17760,7 @@ sed -i -e &#39;s/NC/0 0/g&#39; genodata_1k.txt
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+# Windows user need to run in Powershell App 
 ### PED file (in Linux)
 paste -d&#39; &#39; \
 famID.txt samID.txt patID.txt matID.txt gender.txt pheno.txt genodata_1k.txt &gt; genotype_1k.ped
@@ -17788,6 +17811,7 @@ famID.txt samID.txt patID.txt matID.txt gender.txt pheno.txt genodata_1k.txt &gt
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+# Windows user need to run in Powershell App 
 head GPL16104-1240.txt
 </pre></div>
 
@@ -17837,6 +17861,7 @@ rs35144699	0	0	rs35144699
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+# Windows user need to run in Powershell App 
 ### Row 31 (in Linux)
 tail -n+6 GPL16104-1240.txt &gt; datatable.txt
 </pre></div>
@@ -17855,6 +17880,7 @@ tail -n+6 GPL16104-1240.txt &gt; datatable.txt
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+# Windows user need to run in Powershell App 
 ### Obtain ID, SPOT_ID, chromosome, and physical position (in Linux)
 cut -f1,2,3,4 datatable.txt &gt; map0.txt
 head map0.txt
@@ -17918,6 +17944,7 @@ rs2571902	0	0	rs2571902
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+# Windows user need to run in Powershell App 
 ### SNP ID in discovery set (in Linux)
 awk &#39;NR&gt;=2 {print $2}&#39; GSE129162_1k_geno1.txt &gt; SNPID.txt
 ### Extract map0 to be matched with SNPID (in Linux)
@@ -17950,7 +17977,7 @@ extractrows.pl SNPID.txt map0.txt &gt; map1.txt
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[41]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 ### Order map1 to be matched with SNPID (using R)
 SNPID=fread(&quot;SNPID.txt&quot;, header=F) #read REF ID
 map1=fread(&quot;map1.txt&quot;,header=F) # Col 1 is SNP ID, Col 2 is chr, Col 3 is physical pos, Col 4 is REF ID
@@ -18033,6 +18060,7 @@ write.table(map, &quot;genotype_1k.map&quot;, row.names=F, col.names=F, quote=F,
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+# Windows user need to run in Powershell App 
 paste famID.txt samID.txt resid_phenotype0.txt &gt; phenotype_plink.txt
 </pre></div>
 
@@ -18092,12 +18120,13 @@ paste famID.txt samID.txt resid_phenotype0.txt &gt; phenotype_plink.txt
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[44]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># for macOS users
+<div class=" highlight hl-sos"><pre><span></span># both Mac and Windows can run in Terminal
+# macOS users
 ../../Tools/PLINK/plink_mac_20230116/plink \
 --noweb --file genotype_1k --assoc --adjust --pheno phenotype_plink.txt \
 --all-pheno --out younameit
 
-# for windows users
+# windows users
 ../../Tools/PLINK/plink_win64_20230116/plink.exe \
 --noweb --file genotype_1k --assoc --adjust --pheno phenotype_plink.txt \
 --all-pheno --out younameit
@@ -18318,6 +18347,7 @@ Writing QT --assoc report to younameit.P3.qassoc ... 111620242743505356616468707
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+# Windows user need to run in Powershell App 
 ### Prepare qqman R input files (CHR, SNP, BP, P) (in Linux)
 awk &#39;{print $1,$2,$3,$9}&#39; younameit.P1.qassoc &gt; P1.qassoc
 awk &#39;{print $1,$2,$3,$9}&#39; younameit.P2.qassoc &gt; P2.qassoc
@@ -18349,7 +18379,7 @@ awk &#39;{print $1,$2,$3,$9}&#39; younameit.P3.qassoc &gt; P3.qassoc
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[46]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 traits=c(&quot;z-4-oh-Tam&quot;,&quot;tamoxifen&quot;,&quot;z-endoxifen_ratio&quot;) #name of four traits
 traits=as.matrix(traits) #create a matrix from traits
 
@@ -18490,7 +18520,7 @@ head(qassoc3)
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[47]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 traits=c(&quot;z-4-oh-Tam&quot;,&quot;tamoxifen&quot;,&quot;z-endoxifen_ratio&quot;) #name of four traits
 
 # trait 1: Z-4-OH-TAM
@@ -18587,7 +18617,7 @@ dev.off()
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[48]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 img &lt;- readPNG(&quot;Manhattan_Plot_for_z-4-oh-Tam.png&quot;)
 grid::grid.raster(img)
 </pre></div>
@@ -20769,7 +20799,7 @@ class="
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[49]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 img &lt;- readPNG(&quot;Manhattan_Plot_for_tamoxifen.png&quot;)
 grid::grid.raster(img)
 </pre></div>
@@ -22917,7 +22947,7 @@ class="
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[50]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 img &lt;- readPNG(&quot;Manhattan_Plot_for_z-endoxifen_ratio.png&quot;)
 grid::grid.raster(img)
 </pre></div>
@@ -24301,7 +24331,7 @@ observed quantiles of a distribution versus the quantiles of the ideal distribut
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[51]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 traits=c(&quot;z-4-oh-Tam&quot;,&quot;tamoxifen&quot;,&quot;z-endoxifen_ratio&quot;) #name of four traits
 
 # trait 1: Z-4-OH-TAM
@@ -24398,7 +24428,7 @@ dev.off()
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[52]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 img1 &lt;- readPNG(&quot;Q-Q_Plot_for_z-4-oh-Tam.png&quot;)
 grid::grid.raster(img1)
 </pre></div>
@@ -25546,7 +25576,7 @@ class="
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[53]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 img2 &lt;- readPNG(&quot;Q-Q_Plot_for_tamoxifen.png&quot;)
 grid::grid.raster(img2)
 </pre></div>
@@ -26712,7 +26742,7 @@ class="
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[54]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 img3 &lt;- readPNG(&quot;Q-Q_Plot_for_z-endoxifen_ratio.png&quot;)
 grid::grid.raster(img3)
 </pre></div>
@@ -27773,6 +27803,7 @@ The results are stored in the files: <strong>P(1,2,3).qassoc.adjusted</strong>.<
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+# Windows user need to run in Powershell App 
 awk &#39;{print $1,$2,$3,$9}&#39; younameit.P1.qassoc.adjusted &gt; P1.qassoc.adjusted
 awk &#39;{print $1,$2,$3,$9}&#39; younameit.P2.qassoc.adjusted &gt; P2.qassoc.adjusted
 awk &#39;{print $1,$2,$3,$9}&#39; younameit.P3.qassoc.adjusted &gt; P3.qassoc.adjusted
@@ -27814,7 +27845,7 @@ awk &#39;{print $1,$2,$3,$9}&#39; younameit.P3.qassoc.adjusted &gt; P3.qassoc.ad
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[56]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 traits=c(&quot;z-4-oh-Tam&quot;,&quot;tamoxifen&quot;,&quot;z-endoxifen_ratio&quot;)
 traits=as.matrix(traits)
 
@@ -27851,7 +27882,7 @@ for (i in 1:3){
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[57]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 library(data.table)
 map&lt;- fread(&quot;genotype_1k.map&quot;,header=F)
 names(map) &lt;- c(&quot;CHR&quot;,&quot;SNP&quot;,&quot;GP&quot;,&quot;BP&quot;) # assign header
@@ -27946,7 +27977,7 @@ dim(zr_result) #get number of significant SNPs
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[58]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 kgp_snps &lt;- zr_result[grepl(&quot;kgp&quot;,zr_result$SNP),]
 head(kgp_snps)
 kgp_snps$CHR&lt;- paste0(&quot;chr&quot;,kgp_snps$CHR)
@@ -28038,7 +28069,7 @@ dim(kgp_snps)
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[59]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 kgp_rs&lt;- fread(&quot;kgp_rs.txt&quot;,header=F)
 names(kgp_rs)&lt;- c(&quot;CHR&quot;,&quot;BP_1&quot;,&quot;BP&quot;,&quot;SNP&quot;)# assign header
 idx &lt;- match(kgp_rs$BP, kgp_snps$BP)# get index of these matched SNPs in results
@@ -28108,7 +28139,7 @@ kgp_match
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[60]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 rs_snps &lt;- zr_result[grepl(&quot;rs&quot;,zr_result$SNP),]
 kgp_match$CHR &lt;- &quot;22&quot;
 rs_snps &lt;- rbind(rs_snps, kgp_match[,-6])
@@ -28272,7 +28303,7 @@ rs_snps
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[61]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 qassoc=read.table(&quot;younameit.P3.qassoc&quot;, header=T, stringsAsFactors=F) #load association results
 idx=which(qassoc$CHR==22 &amp; qassoc$BP&gt;=4200000 &amp; qassoc$BP&lt;=52000000 &amp; qassoc$SNP!=&quot;---&quot; &amp; !is.na(qassoc$P)) #index of regional SNPs
 TYPE=rep(&quot;typed&quot;, length(idx)) #all SNPs are typed SNPs
@@ -28366,7 +28397,7 @@ head(region)
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[62]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 source(&quot;regional_association_plot.r&quot;) #load source function
 locus=read.table(&quot;regional_SNPs.txt&quot;, header=T, row.names=1) #read information of regional SNPs
 png(&quot;assocplot_rs8138080.png&quot;)
@@ -28732,7 +28763,7 @@ Warning message in arrows(max(genes.in.locus[i, ]$START, min.pos), -offset, min(
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[63]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 img_fancy &lt;- readPNG(&quot;assocplot_rs8138080.png&quot;)
 grid::grid.raster(img_fancy)
 </pre></div>
@@ -30710,7 +30741,7 @@ class="
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[64]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 # read in, the SNP doesn&#39;t match
 qassoc=fread(paste0(&quot;P3.qassoc&quot;), header=T)
 qassoc.adjusted=fread(&quot;P3.qassoc.adjusted&quot;, header=T)
@@ -30798,7 +30829,7 @@ head(qassoc)
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[65]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 # match and merge data
 qassoc&lt;-qassoc[!is.na(qassoc$P),]
 idx&lt;-match(qassoc.adjusted$SNP,qassoc$SNP)
@@ -30832,7 +30863,7 @@ qassoc.adjusted$P&lt;-qassoc_sub$P
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[66]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 # generate plot
 colnames(qassoc.adjusted)&lt;-c(&quot;CHR&quot;,&quot;MARKER&quot;,&quot;PVALUE&quot;,&quot;FDR_BH&quot;,&quot;POSITION&quot;,&quot;P2&quot;)
 # label the most significant SNP
@@ -30856,7 +30887,7 @@ plot_regional(qassoc.adjusted, chr=22, start_pos=41000000,end_pos=51000000,
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[67]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 regional_plot &lt;- readPNG(&quot;regional_association_plot.png&quot;)
 grid::grid.raster(regional_plot)
 </pre></div>
@@ -31473,7 +31504,7 @@ class="
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[68]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 pheno=read.table(&quot;phenotype0.txt&quot;) #read phenotype data
 zr=pheno[,3] #obtain phenotype data of Z-endoxifen ratio (Col 3)
 write.table(zr,&quot;z_endoxifen_ratio.txt&quot;,row.names=F,col.names=F,quote=F,sep=&quot; &quot;) #save phenotype data of Z-endoxifen ratio
@@ -31515,7 +31546,7 @@ write.table(zr,&quot;z_endoxifen_ratio.txt&quot;,row.names=F,col.names=F,quote=F
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[69]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 # index of significant SNPs in PED file (using R)
 map=fread(&quot;genotype_1k.map&quot;,header=F) #read MAP file
 names(map)=c(&quot;CHR&quot;, &quot;SNP&quot;, &quot;GP&quot;, &quot;BP&quot;) #specify names of MAP file
@@ -31569,6 +31600,7 @@ genoidx
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-sos"><pre><span></span># bash codes- run in terminal
+# Windows user need to run in Powershell App 
 # extract genotype for rs8138080
 awk &#39;{print $1901 $1902}&#39; &lt; genotype_1k.ped &gt; rs8138080.txt
 </pre></div>
@@ -31609,7 +31641,7 @@ awk &#39;{print $1901 $1902}&#39; &lt; genotype_1k.ped &gt; rs8138080.txt
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[71]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 pheno=read.table(&quot;z_endoxifen_ratio.txt&quot;) #read phenotype data of Z-endoxifen ratio
 geno=read.table(&quot;rs8138080.txt&quot;, sep=&quot;\t&quot;) #read genotype data of rs8138080
 pheno=as.matrix(pheno) #create a matrix from the phenotype data
@@ -31937,7 +31969,7 @@ class="
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[72]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 geno=read.table(&quot;rs8138080.txt&quot;) #read genotype data of rs8138080
 geno=as.matrix(geno) #create a matrix from the genotype data
 geno[geno==&quot;GG&quot;]=2 #replace GG with 2
@@ -31971,7 +32003,7 @@ write.table(geno, &quot;rs8138080_geno.txt&quot;, row.names=F, col.names=F, quot
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[73]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 pheno=read.table(&quot;z_endoxifen_ratio.txt&quot;) #read phenotype data 
 geno=read.table(&quot;rs8138080_geno.txt&quot;) #read genotype data of rs8138080
 pheno=as.matrix(pheno) #create a matrix from the phenotype data
@@ -32064,7 +32096,7 @@ summary(fit)$r.squared #R squared of the regression
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 # write your code here
 </pre></div>
 
@@ -32105,7 +32137,7 @@ summary(fit)$r.squared #R squared of the regression
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 # here is the code to read in phenotype and combine genotype data for all 5 SNPs
 pheno=read.table(&quot;z_endoxifen_ratio.txt&quot;) #read phenotype data 
 geno1=read.table(&quot;rs8138080_geno.txt&quot;) #read genotype data of rs8138080
@@ -32131,7 +32163,7 @@ geno=as.matrix(geno) #create a matrix from the genotype data
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-sos"><pre><span></span># R codes- run in R
+<div class=" highlight hl-sos"><pre><span></span># R codes- run in R Console
 ## write your code here to fit linear regression and calculate R^2
 </pre></div>
 
