@@ -40,7 +40,24 @@ Before you install, you need to check whether these tools are compatible to run 
 
 You can find installation packages for PLINK and IMPUTE2 in your downloaded "bigcare-main/Tools" folder. You need to locate the corresponding program ZIP files that are suitable for your laptop system then unzip it before use. 
 
-- **For macOS users**: You can run both PLINK and IMPUTE
+- **For macOS users**: You can run both PLINK and IMPUTE2.
+  PLINK installation ZIP file can be found in "/bigcare/Tools/PLINK/plink_mac_20230116.zip". Unzip this file by double-click and a folder "plink_mac_20230116" will be created. The PLINK program file "plink" is within this folder. You can call PLINK program by specifying the absolute path to this "plink" file: `/path/to/bigcare-main/Tools/PLINK/plink_mac_20230116/plink`. Similar for IMPUTE2, you can unzip the installation ZIP file for macOS in "/bigcare-main/Tools/IMPUTE2/impute_v2.3.2_MacOSX_Intel.tgz". IMPUTE2 program can be called with `/path/to/bigcare-main/Tools/IMPUTE2/impute_v2.3.2_MacOSX_Intel/impute2`. 
+
+  > 👉 macOS needs to authorize programs before use: 
+  >
+  > When you try to call PLINK or IMPUTE2 with the above commands, you might get a pop-up window with the following message `“plink” cannot be opened because the developer cannot be verified`. Select "Cancel" and we will authorize PLINK and IMPUTE2 first. Please go to macOS "System Settings"->"Privacy & Security", and scroll down until you see a message `"plink" was blocked from use because it is not from an identified developer`. Click "Allow Anyway" and you will be prompt to enter your Mac username and password. Click "Unlock" and then"Allow Anyway" again, and the previous message will disappear. Then try to run the same codes again in RStudio Terminal. You will get another pop-up window saying macOS cannot verify the developer of “plink”. Are you sure you want to open it?, select "Open" then you can see PLINK or IMPUTE2 commands options show up in Terminal.
+pop-up window when you try to run program for the first time|  Solarized Ocean
+:-------------------------:|:-------------------------:
+![pop-up1](./image/popup1)  |  ![popup2](popup2)
+
+Note that Windows system won't be able to run IMPUTE2.
+Similar for Windows system, you need to unzip the package "plink_win64_20230116.zip" with right click->"Extract All...". Then you can call PLINK with /path/to/bigcare-main/Tools/PLINK/plink_win64_20230116/plink.exe.
+
+You should modify the above /path/to/bigcare to where your "bigcare-main" folder is.
+
+
+
+
   - To call PLINK or IMPUTE2 from terminal, please run this:
     `cd /path/to/bigcare # change this to where you saved "bigcare-main"
     ./Tools/PLINK/plink/plink_mac_20230116/plink --help # change the path to where PLINK program is saved`
