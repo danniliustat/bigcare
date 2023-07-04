@@ -27,7 +27,7 @@ Throughout this course, we will primarily use the programming languages Bash and
     Windows has two command-line shells, Command shell and Windows Powershell. Command shell is specific to Windows system and can be run in "Command Prompt" App or in RStudio Terminal. But Windows commands are NOT the same as Bash commands! Powershell App is the only place to run Bash commands for Windows users. For example, Bash codes such as "head" or "awk" can't be recogonized from RStudio Terminal, but can be run from Powershell.
 
     To open Powershell, search for "Powershell" App in Windows menu.(Don't choose 'Command Prompt'.) You can also find it by pressing "windows+X" key and select "Terminal" in the menu appeared. Test whether you can run bash codes by typing `ls` in the terminal window. Then set your working directory to the downloaded "bigcare-main" folder by typing: `cd /path/to/bigcare-main` (change this path to where you saved it).
-  ::
+  :::
   
   
   In GWAS analysis, we will also use tools likeyou can **ONLY** run PLINK program codes. If you would like to try Bash codes, please open "Windows Powershell" app and follow the same steps to set the paths. Still, Powershell App won't run PLINK codes, so you'll have to switch between Pwershell and RStudio Terminal.
