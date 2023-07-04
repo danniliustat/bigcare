@@ -19,19 +19,34 @@ Throughout this course, we will primarily use the programming languages Bash and
 
 You can download R and RStudio at [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/). Choose the installation files that are suitable for your laptop system. You have to install R before installing RStudio. 
 
-After you launch RStudio, locate the bottom left panel which has two tabs "Console" and "Terminal". We will mainly use these two tabs for our course. "Console" window is used to run R codes and "Terminal" window can access your system shell. For macOS users, "Terminal" can run Bash commands directly. You will start by setting your working directory to the downloaded "bigcare-main" folder by typing: `cd /path/to/bigcare-main` (change this path to where you saved it).
-  
-However, Windows users need to use another "Powershell" App to run Bash codes because the default system shell language for Windows is Windows commands, which is different from Bash. See notes below.
+After you launch RStudio, locate the bottom left panel which has two tabs "Console" and "Terminal". We will mainly use these two tabs for our course. "Console" window is used to run R codes and "Terminal" window can access your system shell. 
 
+For macOS users, "Terminal" can run Bash commands directly. You will start by setting your working directory to the downloaded "bigcare-main" folder by typing: `cd /path/to/bigcare-main` (change this path to where you saved it) in the RStudio Terminal.
+  
+However, Windows users need to use another "Powershell" App to run Bash codes because the default system shell language for Windows is Windows Commands, which is different from Bash commands. See notes below.
   
 > 👉**Special Notes to Windows Users**:
 >
-> Windows has two command-line shells, Command shell and Windows Powershell. Command shell is specific to Windows system and can be run in "Command Prompt" App or in RStudio Terminal. But Windows commands are NOT the same as Bash commands! Powershell App is the only place to run Bash commands for Windows users. For example, Bash codes such as "head" or "awk" can't be recogonized from RStudio Terminal, but can be run from Powershell.
+> Windows has two command-line shells, Windows Command shell and Windows Powershell. Windows Command shell is default for Windows system and can be run in "Command Prompt" App or in RStudio Terminal. But Windows commands are NOT the same as Bash commands! Powershell App is the only place to run Bash commands for Windows users. For example, Bash codes such as "ls", "head" or "awk" can't be recogonized from RStudio Terminal, but can be run from Powershell.
 >
-> To open Powershell, search for "Powershell" App in Windows menu.(Don't choose 'Command Prompt'.) You can also find it by pressing "windows+X" key and select "Terminal" in the menu appeared. Test whether you can run bash codes by typing `ls` in the terminal window. Then set your working directory to the downloaded "bigcare-main" folder by typing: `cd /path/to/bigcare-main` (change this path to where you saved it).
+> To open Powershell, search for "Powershell" App in Windows menu.(Don't choose 'Command Prompt'.) You can also find it by pressing "Windows+X" key and select "Terminal" in the menu appeared. Test whether you can run bash codes by typing `ls` in the terminal window. Then set your working directory to the downloaded "bigcare-main" folder by typing: `cd /path/to/bigcare-main` (change this path to where you saved it).
   
-  
-In GWAS analysis, we will also use tools likeyou can **ONLY** run PLINK program codes. If you would like to try Bash codes, please open "Windows Powershell" app and follow the same steps to set the paths. Still, Powershell App won't run PLINK codes, so you'll have to switch between Pwershell and RStudio Terminal.
+### Required GWAS Tools
+In GWAS analysis, we also use additional command-line tools to handle large scale datasets. The primary tools we use in this course are **PLINK** and **IMPUTE2**. Participants need to install these tools on your own laptops before calling them. 
+
+Before you install, you need to check whether these tools are compatible to run on your laptop system. Usually, bioinformatics analyses are run on computational servers with Linux system given the large data volumn and high computational power required. So most bioinformatic programs are developed for Linux and only some of them are available to run on personal laptops. Specically for the tools used in our course, **PLINK** is compatible with Windows, macOS, and Linux, while **IMPUTE2** is only available for macOS and Linux users. We also use another tool, Eigensoft, in "2_Summary_of_Data_Preprocess...", but this tool can only be executed on a Linux operating system. 
+
+**Installation instructions**
+
+You can find installation packages for PLINK and IMPUTE2 in your downloaded `bigcare-main`-`Tools` folder. You need to locate the corresponding program ZIP files that are suitable for your laptop system then unzip it before use. 
+
+
+    - To call PLINK or IMPUTE2 from terminal, please run this:
+    `cd /path/to/bigcare # change this to where you saved "bigcare-main"
+    ./Tools/PLINK/plink/plink_mac_20230116/plink --help # change the path to where PLINK program is saved`
+    For macOS users, it will prompt you to authorize the program before running. You should open "Setting"-"Privacy and Security", then scroll to the bottom to click "allow" for PLINK to run. After you allow it, it will ask you a second time in the pop-up window whether you want to open it. Click "Open" to run it. You should see the PLINK options appear in the terminal window.
+
+you can **ONLY** run PLINK program codes. If you would like to try Bash codes, please open "Windows Powershell" app and follow the same steps to set the paths. Still, Powershell App won't run PLINK codes, so you'll have to switch between Pwershell and RStudio Terminal.
 
 
 
@@ -43,9 +58,5 @@ In GWAS analysis, we will also use tools likeyou can **ONLY** run PLINK program 
 - **Data**: This folder includes the necessary data files, including the toy example datasets, case study data, and the corresponding results. We will read data and write outputs to this folder.
 
 - **Tools**: This folder contains programs that we will use in our course.
-  - The primary tools are **PLINK** and **IMPUTE2**, both of which are integral to GWAS analysis. The installation packages for these tools can be found in this folder. To be able to use them, you will need to unzip the corresponding program ZIP files that is suitable for your laptop system. Specically, PLINK is compatible with Windows, macOS, and Linux, while IMPUTE2 is only available for macOS and Linux users. However, Eigensoft, another software used in chapter 2, can only be executed on a Linux operating system. (Bioinformatics analyses are usually run on computational servers with Linux system given the large data volumn and high computational power required. So most bioinformatic programs are developed under Linux and only some of them are available to run on personal laptops. )
-    - To call PLINK or IMPUTE2 from terminal, please run this:
-    `cd /path/to/bigcare # change this to where you saved "bigcare-main"
-    ./Tools/PLINK/plink/plink_mac_20230116/plink --help # change the path to where PLINK program is saved`
-    For macOS users, it will prompt you to authorize the program before running. You should open "Setting"-"Privacy and Security", then scroll to the bottom to click "allow" for PLINK to run. After you allow it, it will ask you a second time in the pop-up window whether you want to open it. Click "Open" to run it. You should see the PLINK options appear in the terminal window.
+  - T The installation packages for these tools can be found in this folder. 
     
