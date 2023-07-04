@@ -13,12 +13,24 @@ In this course, we will explore the fundamentals of Genome-Wide Association Stud
 The course is divided into five chapters, starting with the initial overview of the tools and pipeline using toy or example datasets. This section will give you a general idea of the different steps involved in GWAS analysis. The subsequent chapters will focus on the breast cancer case study from GEO. These chapters will provide a hands-on experience of analyzing real-world data.
 
 ### Programming Language: 
-Throughout this course, we will primarily use the programming languages Bash and R. It is essential that you have a working knowledge of both languages before carrying out your own analysis. Please ensure that you have the **terminal** application and **R** installed on your laptop to actively participate in the course. 
+Throughout this course, we will primarily use the programming languages Bash and R. It is essential that you have a working knowledge of both languages before carrying out your own analysis. Please ensure that you have **RStudio** installed on your laptop to actively participate in the course. 
+
+- **Install R and RStudio**: You can download R and RStudio at [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/). Choose the installation files that are suitable for your laptop system. You have to install R before installing RStudio. 
+  - After you launch RStudio, locate the bottom left panel which has two tabs "Console" and "Terminal". We will mainly use these two tabs for our course. "Console" window is used to run R codes and "Terminal" window can access your system shell. For macOS users, "Terminal" can run Bash commands directly. You will start by setting your working directory to the downloaded "bigcare-main" folder by typing: `cd /path/to/bigcare-main` (change this path to where you saved it).
+  
+  However, Windows users need to use another "Powershell" App to run Bash codes because the default system shell language for Windows is Windows commands, which is different from Bash. See notes below.
+
+  **Special Notes to Windows Users**:
+  Windows has two command-line shells, Command shell and Windows Powershell. Command shell is specific to Windows system and can be run in "Command Prompt" App or in RStudio Terminal. But Windows commands are NOT the same as Bash commands! Powershell App is the only place to run Bash commands for Windows users. For example, Bash codes such as "head" or "awk" can't be recogonized from RStudio Terminal, but can be run from Powershell. 
+  
+  To open Powershell, search for "Powershell" App in Windows menu.(Don't choose 'Command Prompt'.) You can also find it by pressing "windows+X" key and select "Terminal" in the menu appeared. Test whether you can run bash codes by typing `ls` in the terminal window. Then set your working directory to the downloaded "bigcare-main" folder by typing: `cd /path/to/bigcare-main` (change this path to where you saved it).
+  
+  In GWAS analysis, we will also use tools likeyou can **ONLY** run PLINK program codes. If you would like to try Bash codes, please open "Windows Powershell" app and follow the same steps to set the paths. Still, Powershell App won't run PLINK codes, so you'll have to switch between Pwershell and RStudio Terminal.
 
 - Open **Terminal**
-  - In Windows: Windows has two command-line shells, Command shell and Windows Powershell. But the commands used for these two shells are slightly different. Search for "Powershell" App in Windows menu.(Don't use 'Command Prompt'.) If you can't find it, press "windows+X" key and select "Terminal" in the menu appeared. Test whether you can run bash codes by typing `ls` in the terminal window. Then navigate to the downloaded "bigcare-main" folder by typing: `cd /path/to/bigcare-main` (change this path to where you saved it).
+  - In Windows: Search for "Powershell" App in Windows menu.(Don't use 'Command Prompt'.) If you can't find it, press "windows+X" key and select "Terminal" in the menu appeared. Test whether you can run bash codes by typing `ls` in the terminal window. Then navigate to the downloaded "bigcare-main" folder by typing: `cd /path/to/bigcare-main` (change this path to where you saved it).
   - In macOS: MacOS is able to run bash command line directly. Open the "Terminal" App and navigate to the downloaded "bigcare-main" folder by typing: `cd /path/to/bigcare-main` (change this path to where you saved it).
-- **Install R and RStudio**: You can download both R and RStudio at [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/). Choose the installation files that are suitable for your laptop system. You have to install R before installing RStudio. 
+
 
 **Below is the folder structure in this repository**:
 - **Five .HTML files started with "1_..." to "5_..."**: These are the course materials with instructions, codes and outputs. Double click on them or drag these files to your browser to open.
