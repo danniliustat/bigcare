@@ -52,7 +52,7 @@ If you would like to try Bash codes, please open "Windows Powershell" app and fo
 
 
 ### Below is the folder structure in this repository:
-- **Five .HTML files started with "1_..." to "5_..."**: These are the course materials with instructions, codes and outputs. Double click on them or drag these files to your browser to open.
+- **Five .HTML files for Chapter 1-5 started with "ch1_..." to "ch5_..."**: These are the course materials with instructions, codes and outputs. Double click on them or drag these files to your browser to open.
   - We will begin with two chapters that provide an overview of the tools and pipeline, using toy or example datasets. These small datasets will allow you to grasp the different steps involved in GWAS analysis. Additionally, these toy examples will enable you to explore the data structure and manipulate the results easily, as they are small and can be easily opened.
   - The remaining chapters 3-5 will delve into a detailed case study on breast cancer, utilizing a dataset downloaded from the Gene Expression Omnibus (GEO). To facilitate running the analysis on a personal laptop, we have subsetted the genotype data to include only 1000 Single Nucleotide Polymorphisms (SNPs).
 
