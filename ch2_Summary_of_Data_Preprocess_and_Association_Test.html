@@ -14600,7 +14600,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <p>The data used for this example is a toy genotype data containing 5 random SNPs and a random phenotype data with covariates.</p>
 <p>We use both bash and R codes in this notebook. The type of programming language is labeled at the top of each code cell.</p>
 <div class="alert alert-block alert-warning">
-<b> Special notes for Windows users: Windows has two command-line shells, Command shell and Windows Powershell. Command shell is specific to Windows system and can be run from RStudio Terminal or in "Command Prompt" App, but the lanugage it uses is NOT the same as Bash! Powershell App is the only place to run Bash commands in Windows. Therefore if you are Windows users and use RStudio for this course, you can't run bash codes such as "head" or "awk" from RStudio Terminal, you can **ONLY** run PLINK program codes. If you would like to try Bash codes, please open "Windows Powershell" app and follow the same steps to set the paths. Still, Powershell App won't run PLINK codes, so you'll have to switch between Pwershell and RStudio Terminal.</b>
+<b> Special notes for Windows users: Windows has two command-line shells, Command shell and Windows Powershell. Command shell is specific to Windows system and can be run from RStudio Terminal or in "Command Prompt" App, but the language it uses is NOT the same as Bash! Powershell App is the only place to run Bash commands in Windows. Therefore if you are Windows users and use RStudio for this course, you can't run bash codes such as "head" or "awk" from RStudio Terminal, you can **ONLY** run PLINK program codes. If you would like to try Bash codes, please open "Windows Powershell" app and follow the same steps to set the paths. Still, Powershell App won't run PLINK codes, so you'll have to switch between Powershell and RStudio Terminal.</b>
 </div>
 </div>
 </div>
@@ -14710,12 +14710,24 @@ https://www.rcac.purdue.edu/knowledge/biocontainers
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Instructions on installing these two tools can be found on course GitHub <a href="https://github.com/danniliustat/bigcare/tree/main">here</a>.</p>
+
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>For example, my computer is macOS system so I can run both PLINK and IMPUTE2. After I downloaded "bigcare-main" folder, I open <code>./Tools/PLINK</code> and unzip the plink package for macOS: "plink_mac_20230116.zip". A folder "plink_mac_20230116" will be created which contains a program file called "plink". Then, I can call PLINK program by specifying the absolute path of this "plink" program: <code>/path/to/bigcare-main/Tools/PLINK/plink_mac_20230116/plink</code>. Similar for Windows system, you need to unzip the package "plink_win64_20230116.zip" with right click-&gt;"Extract All...". Then you can call PLINK with <code>/path/to/bigcare-main/Tools/PLINK/plink_win64_20230116/plink.exe</code>.</p>
 <p>Similar for IMPUTE2, I unzip "impute_v2.3.2_MacOSX_Intel.tgz" for macOS under "./bigcare-main/Tools/IMPUTE2/". And I can call IMPUTE2 program with <code>/path/to/bigcare-main/Tools/IMPUTE2/impute_v2.3.2_MacOSX_Intel/impute2</code>. Note that Windows system won't be able to run IMPUTE2.</p>
 <p>You should modify the above <code>/path/to/bigcare</code> to where your "bigcare-main" folder is.</p>
 <div class="alert alert-block alert-warning">
 <b>However, macOS users need to go through additional steps to authorize PLINK and IMPUTE2 programs before you can call them! See below.</b>
-</div><p>When you try to call PLINK or IMPUTE2 with the above commands, you might get a pop-up window with the following message <code>“plink” cannot be opened because the developer cannot be verified.</code>. Select "Cancel" and we will authorize PLINK first. Please go to macOS "System Settings"-&gt;"Privacy &amp; Security", and scroll down until you see a message <code>"plink" was blocked from use because it is not from an identified developer.</code>. Click "Allow Anyway" and you will be prompt to enter your Mac username and password. Click "Unlock" and then"Allow Anyway" again, and the previous message will disappear. Then try to run the same codes again in RStudio Terminal. You will get another pop-up window saying <code>macOS cannot verify the developer of “plink”. Are you sure you want to open it?</code>, select "Open" then you can see PLINK or IMPUTE2 commands options show up in Terminal.</p>
+</div><p>When you try to call PLINK or IMPUTE2 with the above commands, you might get a pop-up window with the following message <code>“plink” cannot be opened because the developer cannot be verified.</code>. Select "Cancel" and we will authorize PLINK first. Please go to macOS "System Settings"-&gt;"Privacy &amp; Security", and scroll down until you see a message <code>"plink" was blocked from use because it is not from an identified developer.</code>. Click "Allow Anyway" and you will be prompt to enter your Mac username and password. Click "Unlock" and then "Allow Anyway" again, and the previous message will disappear. Then try to run the same codes again in RStudio Terminal. You will get another pop-up window saying <code>macOS cannot verify the developer of “plink”. Are you sure you want to open it?</code>, select "Open" then you can see PLINK or IMPUTE2 commands options show up in Terminal.</p>
 
 </div>
 </div>
@@ -14984,9 +14996,9 @@ head ./Data/QC/5SNPs.map
 <p>The following commands compute the <strong>missingness</strong> for each SNP and each subject. (The output will print all calculation progress generated by <code>PLINK</code>.)</p>
 <ol>
 <li><strong>--noweb</strong>, suppress the connection to internet for version check.</li>
-<li><strong>--file</strong>, specify the input files. Same for the other functions of plink in unit 4.</li>
+<li><strong>--file</strong>, specify the input files.</li>
 <li><strong>--missing</strong>,  calculate the number of missing and missing rate.</li>
-<li><strong>--out</strong>, specify the output file name. Same for the other functions of plink in unit 4.</li>
+<li><strong>--out</strong>, specify the output file name.</li>
 </ol>
 
 </div>
@@ -15208,7 +15220,7 @@ head ./Data/QC/younameit.lmiss
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Calculating-allel-frequencies">Calculating allel frequencies<a class="anchor-link" href="#Calculating-allel-frequencies">&#182;</a></h3>
+<h3 id="Calculating-allele-frequencies">Calculating allele frequencies<a class="anchor-link" href="#Calculating-allele-frequencies">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -15577,9 +15589,9 @@ head ./Data/QC/younameit.hwe
 <p>The following command performs <strong>multiple quality controls</strong>. (The output will print all calculation progress generated by <code>PLINK</code>.)</p>
 <ol>
 <li><strong>--mind</strong> 0.1, exclude the individuals with missing rate larger than 0.1. You can change 0.1 to other desired values.</li>
-<li><strong>--geno</strong> 0.1, exclude the SNPs with missing rate larger than 0.1. You can change 0.1 to other desiered values.</li>
-<li><strong>--maf</strong> 0.05, exclude the SNPs with minor allele frequency (MAF) smaller than 0.05. You can change 0.05 to other desiered values.</li>
-<li><strong>--hwe</strong> 0.001, exclude the SNPs with P-values of Hardy-Weinberg test smaller than 0.001. You can change it to otehr desired values.</li>
+<li><strong>--geno</strong> 0.1, exclude the SNPs with missing rate larger than 0.1. You can change 0.1 to other desired values.</li>
+<li><strong>--maf</strong> 0.05, exclude the SNPs with minor allele frequency (MAF) smaller than 0.05. You can change 0.05 to other desired values.</li>
+<li><strong>--hwe</strong> 0.001, exclude the SNPs with P-values of Hardy-Weinberg test smaller than 0.001. You can change it to other desired values.</li>
 <li><strong>--recode</strong>, generate a new dataset.</li>
 </ol>
 
@@ -15717,7 +15729,7 @@ Note: No phenotypes present.
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The following command will calculate <strong>indentical by descent (IBS) distances</strong> between all individuals.</p>
+<p>The following command will calculate <strong>identity by descent (IBS) distances</strong> between all individuals.</p>
 <ol>
 <li><strong>--genome</strong>, calculate IBS</li>
 </ol>
@@ -15910,7 +15922,7 @@ head ./Data/QC/younameit.genome
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>In many cases, raw sequence data may have missing values. Then, an imputation step will be neccessary. <strong>IMPUTE2</strong> is a popular software package for imputation. Below is a simple example for conducting imputation by IMPUTE2. For more information about IMPUTE2, please refer its website <a href="http://mathgen.stats.ox.ac.uk/impute/impute_v2.html">http://mathgen.stats.ox.ac.uk/impute/impute_v2.html</a> and the associated publication <a href="http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1000529">http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1000529</a></p>
+<p>In many cases, raw sequence data may have missing values. Then, an imputation step will be necessary. <strong>IMPUTE2</strong> is a popular software package for imputation. Below is a simple example for conducting imputation by IMPUTE2. For more information about IMPUTE2, please refer its website <a href="http://mathgen.stats.ox.ac.uk/impute/impute_v2.html">http://mathgen.stats.ox.ac.uk/impute/impute_v2.html</a> and the associated publication <a href="http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1000529">http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1000529</a></p>
 
 </div>
 </div>
@@ -16387,7 +16399,7 @@ head(group)
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Then we select the first five columns from <code>.ped</code> file (in Linux), add add the group file we just generated to get the <code>genotype.pedind</code>.</p>
+<p>Then we select the first five columns from <code>.ped</code> file (in Linux), and add the group file we just generated to get the <code>genotype.pedind</code>.</p>
 
 </div>
 </div>
@@ -17285,7 +17297,7 @@ head ./Data/Assoc/younameit.conty.qassoc
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Case/Control-Asssociation-Test-for-Binary-Trait">Case/Control Asssociation Test for Binary Trait<a class="anchor-link" href="#Case/Control-Asssociation-Test-for-Binary-Trait">&#182;</a></h2>
+<h2 id="Case/Control-Association-Test-for-Binary-Trait">Case/Control Association Test for Binary Trait<a class="anchor-link" href="#Case/Control-Association-Test-for-Binary-Trait">&#182;</a></h2>
 </div>
 </div>
 </div>
@@ -17548,7 +17560,7 @@ head ./Data/Assoc/younameit.biny.assoc
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Before the association test, we adjust the phenotypes to remove the effects of covariates. For the continous phenotype, we employ linear regression to adjust the phenotype. Then, we use the residual as the new phenotype in the association test.</p>
+<p>Before the association test, we adjust the phenotypes to remove the effects of covariates. For the continuous phenotype, we employ linear regression to adjust the phenotype. Then, we use the residual as the new phenotype in the association test.</p>
 
 </div>
 </div>
@@ -17595,7 +17607,7 @@ p=dim(pheno)[2] #number of traits
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>Covariates adjustment is done by fitting a linear regression model and obtain residuals as new phenotype data for association test.</p>
-<p>The following codes construct the linear model for each of the traits using <code>lm</code> function.The resulted residual data is saved for analysis.</p>
+<p>The following codes construct the linear model for each of the traits using <code>lm</code> function. The resulted residual data is saved for analysis.</p>
 
 </div>
 </div>
@@ -17630,7 +17642,7 @@ write.table(residpheno, &quot;./Data/Assoc/resid_phenotype.txt&quot;, row.names=
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Residual-phenotype-data-after-covariates-adjustments-(in-UNIX):">Residual phenotype data after covariates adjustments (in UNIX):<a class="anchor-link" href="#Residual-phenotype-data-after-covariates-adjustments-(in-UNIX):">&#182;</a></h3><p>This code combines the above residual data and sample ID information to contruct the phenotype data for PLINK.</p>
+<h3 id="Residual-phenotype-data-after-covariates-adjustments-(in-UNIX):">Residual phenotype data after covariates adjustments (in UNIX):<a class="anchor-link" href="#Residual-phenotype-data-after-covariates-adjustments-(in-UNIX):">&#182;</a></h3><p>This code combines the above residual data and sample ID information to construct the phenotype data for PLINK.</p>
 
 </div>
 </div>
@@ -17684,7 +17696,7 @@ paste ./Data/Assoc/famID.txt ./Data/Assoc/sampleID.txt \
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>After adjusting the phenotype using a set of covariates, we use the residual as new phenotype for the association test. <code>PLINK</code> was used again to perform assiciation test.</p>
+<p>After adjusting the phenotype using a set of covariates, we use the residual as new phenotype for the association test. <code>PLINK</code> was used again to perform association test.</p>
 
 </div>
 </div>
@@ -17851,7 +17863,7 @@ P        Wald test asymptotic p-value</code></pre>
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>In the next section, we will start analyzing real data from a case study. The procedures might not be exactly the same here, as real data require more proprocessing steps before it can be used for association study.</p>
+<p>In the next section, we will start analyzing real data from a case study. The procedures might not be exactly the same here, as real data require more preprocessing steps before it can be used for association study.</p>
 
 </div>
 </div>
