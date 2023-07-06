@@ -14591,7 +14591,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <div class="alert alert-block alert-warning">
-<b>In order to run codes in this notebook, please make sure you have downloaded the "bigcare-main" folder from Github and have RStudio installed on your laptop.</b>
+<b>In order to run codes in this notebook, please make sure you have downloaded the "bigcare-main" folder from GitHub and have RStudio installed on your laptop.</b>
 </div>
 </div>
 </div>
@@ -15021,7 +15021,7 @@ Setting options(&#39;GEOquery.inmemory.gpl&#39;=FALSE)
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>To prepare for logistic regression, we will create a <code>censor</code> variable as an indicator of the <code>status</code> group, with <code>1=recur</code> and <code>0=non-recur</code>. Later, we will use this binary <code>censor</code> variable and the last three columns of continuous expression variables of different genes to perform the analysis.</p>
-<p>The codes below show you how to recode <code>status</code> into a binary variable <code>censor</code>. First, we get the index number of the recurrent status, and save them in <code>index</code> object. Then we create a new variable called <code>censor</code> and assign a sequnce of 0 to this vector. Next, we extract from <code>censor</code> the elements with index number in <code>index</code>, and assign/recode them as 1. After this recoding finishes, we again take a look at the first 6 rows with <code>head</code> function.</p>
+<p>The codes below show you how to recode <code>status</code> into a binary variable <code>censor</code>. First, we get the index number of the recurrent status, and save them in <code>index</code> object. Then we create a new variable called <code>censor</code> and assign a sequence of 0 to this vector. Next, we extract from <code>censor</code> the elements with index number in <code>index</code>, and assign/recode them as 1. After this recoding finishes, we again take a look at the first 6 rows with <code>head</code> function.</p>
 
 </div>
 </div>
@@ -15102,7 +15102,7 @@ Setting options(&#39;GEOquery.inmemory.gpl&#39;=FALSE)
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Below is a simple case/control study on examing relationship between recurrence status and gene expression using logistic regression.</p>
+<p>Below is a simple case/control study on examining relationship between recurrence status and gene expression using logistic regression.</p>
 <p>So what is logistic regression?</p>
 <p>Logistic regression is the regression model to conduct when the dependent variable is dichotomous (binary). In this toy example, the binary dependent variable is recur/non-recur status. Similar to other regression methods, the logistic regression is a predictive analysis but it also reveals the association relationship between the dependent variable and the independent variables.</p>
 <p>Logistic regression can help us answer a variety of questions, including, but not limited to the examples below:</p>
@@ -15124,7 +15124,7 @@ Setting options(&#39;GEOquery.inmemory.gpl&#39;=FALSE)
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>In the code below, we performed a logistic regression with a binary response <code>censor</code> and continuous expression of <code>gene_HOXB13</code>. The model is fitted with function <code>glm</code>. <code>cencor~gene_HOXB13</code> specifies the model structure, where <code>censor</code> is the response and <code>gene_HOCB13</code> is the explanatory variable. <code>family</code> argument specifies the distribution of <code>censor</code> as "binomial", and <code>link</code> sepecifies that link function for binomial response is "logit", which is why this model is called "logistic model".</p>
+<p>In the code below, we performed a logistic regression with a binary response <code>censor</code> and continuous expression of <code>gene_HOXB13</code>. The model is fitted with function <code>glm</code>. <code>cencor~gene_HOXB13</code> specifies the model structure, where <code>censor</code> is the response and <code>gene_HOCB13</code> is the explanatory variable. <code>family</code> argument specifies the distribution of <code>censor</code> as "binomial", and <code>link</code> specifies that link function for binomial response is "logit", which is why this model is called "logistic model".</p>
 
 </div>
 </div>
@@ -15203,7 +15203,7 @@ Number of Fisher Scoring iterations: 4
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The table under <code>Coefficients</code> contains test results. The pvalue of the gene HOXB13, in the last column of this table, is 0.000764 which is way smaller than 0.05. It indicates that this gene has a significant impact on the recurrence status.</p>
+<p>The table under <code>Coefficients</code> contains test results. The p-value of the gene HOXB13, in the last column of this table, is 0.000764 which is way smaller than 0.05. It indicates that this gene has a significant impact on the recurrence status.</p>
 
 </div>
 </div>
@@ -15970,7 +15970,7 @@ class="
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p>To have a direct compare the ROC curve for these 2 genes, we can plot the two ROC curves on a single plot. The code below generate the combined plot. We first plot ROC curve for HOXB13 as normal with color blue, then add the ROC curve of NHLH1 on this plot using <code>lines</code> and color red. <code>legend</code> function specifies the plot legend which is shown at the bottom of the plot.</p>
-<p>With this combined plot, we can conclude that HOXB13 has much higher predictive probability than NHLH1, while retaining a low false positive rate..</p>
+<p>With this combined plot, we can conclude that HOXB13 has much higher predictive probability than NHLH1, while retaining a low false positive rate.</p>
 
 </div>
 </div>
@@ -16701,8 +16701,8 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>In statistics, <strong>linear regression</strong> is an approach for modeling the relationship between a continous dependent variable Y and one or more explanatory variables (or independent variables) denoted by X. The explanatory variables can be either continuous (e.g. age, weight) or categorical (e.g. gender, smoke or not).</p>
-<p>In the following example, we examine the relationship between the expression of gene HOXB13 and IL17BR. Both of them are continous variables.</p>
+<p>In statistics, <strong>linear regression</strong> is an approach for modeling the relationship between a continuous dependent variable Y and one or more explanatory variables (or independent variables) denoted by X. The explanatory variables can be either continuous (e.g. age, weight) or categorical (e.g. gender, smoke or not).</p>
+<p>In the following example, we examine the relationship between the expression of gene HOXB13 and IL17BR. Both of them are continuous variables.</p>
 <p>For more detailed explanation of linear regression, please visit: <a href="https://en.wikipedia.org/wiki/Linear_regression">https://en.wikipedia.org/wiki/Linear_regression</a></p>
 
 </div>
