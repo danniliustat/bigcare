@@ -44,14 +44,14 @@ However, Windows users need to use another "Powershell" App to run Bash codes be
 ### Required GWAS Tools
 In GWAS analysis, we also use additional command-line tools to handle large scale datasets. The primary tools we use in this course are **PLINK** and **IMPUTE2**. Participants need to install these tools on your own laptops before calling them. 
 
-Before you install, you need to check whether these tools are compatible to run on your laptop system. Usually, bioinformatics analyses are run on computational servers with Linux system given the large data volumn and high computational power required. So most bioinformatic programs are developed for Linux and only some of them are available to run on personal laptops. Specically for the tools used in our course, **PLINK** is compatible with Windows, macOS, and Linux, while **IMPUTE2** is only available for macOS and Linux users. We also use another tool, Eigensoft, in "2_Summary_of_Data_Preprocess...", but this tool can only be executed on a Linux operating system. 
+Before you install, you need to check whether these tools are compatible to run on your laptop system. Usually, bioinformatics analyses are run on computational servers with Linux system given the large data volumn and high computational power required. So most bioinformatic programs are developed for Linux and only some of them are available to run on personal laptops. For the tools used in our course, **PLINK** is compatible with Windows, macOS, and Linux, while **IMPUTE2** is only available for macOS and Linux users. We also use another tool, Eigensoft, in "ch2_Summary_of_Data_Preprocess...", but this tool can only be executed on a Linux operating system. We will directly show the codes and outputs for Eigensoft so you don't have to run it.
 
 **Installation instructions**
 
 You can find installation packages for PLINK and IMPUTE2 in your downloaded "bigcare-main/Tools" folder. You need to locate the corresponding program ZIP files that are suitable for your laptop system then unzip it before use. 
 
 - **For macOS users**: You can run both PLINK and IMPUTE2.
-  PLINK installation ZIP file can be found in "/bigcare/Tools/PLINK/plink_mac_20230116.zip". Unzip this file by double-click and a folder "plink_mac_20230116" will be created. The PLINK program file "plink" is within this folder. You can call PLINK program in RStudio terminal by specifying the absolute path to this "plink" file: `/path/to/bigcare-main/Tools/PLINK/plink_mac_20230116/plink`. Similar for IMPUTE2, you can unzip the installation ZIP file for macOS in "/bigcare-main/Tools/IMPUTE2/impute_v2.3.2_MacOSX_Intel.tgz". IMPUTE2 program can be called with `/path/to/bigcare-main/Tools/IMPUTE2/impute_v2.3.2_MacOSX_Intel/impute2`. An example of codes in RStudio Terminal is as below:
+  PLINK installation ZIP file can be found in "/bigcare-main/Tools/PLINK/plink_mac_20230116.zip". Unzip this file by double-click and a folder "plink_mac_20230116" will be created. The PLINK program file "plink" is within this folder. You can call PLINK program in RStudio Terminal by specifying the absolute path to this "plink" file: `/path/to/bigcare-main/Tools/PLINK/plink_mac_20230116/plink`. Similar for IMPUTE2, you can unzip the installation ZIP file for macOS in "/bigcare-main/Tools/IMPUTE2/impute_v2.3.2_MacOSX_Intel.tgz". IMPUTE2 program can be called with `/path/to/bigcare-main/Tools/IMPUTE2/impute_v2.3.2_MacOSX_Intel/impute2`. An example of codes in RStudio Terminal is as below:
   ```
   cd /path/to/bigcare-main
   ./Tools/PLINK/plink_mac_20230116/plink --help
@@ -59,20 +59,20 @@ You can find installation packages for PLINK and IMPUTE2 in your downloaded "big
 
   > 👉 **macOS needs to authorize programs before use:** 
   >
-  > When you try to call PLINK or IMPUTE2 with the above commands, you might get a pop-up window with the following message `“plink” cannot be opened because the developer cannot be verified`.(Fig1) Select "Cancel" and we will authorize PLINK and IMPUTE2 first. Please go to macOS "System Settings"->"Privacy & Security", and scroll down until you see a message `"plink" was blocked from use because it is not from an identified developer`.(Fig2) Click "Allow Anyway" and you will be prompt to enter your Mac username and password. Click "Unlock" and then"Allow Anyway" again, and the previous message will disappear. Then try to run the same codes again in RStudio Terminal. You will get another pop-up window saying `macOS cannot verify the developer of “plink”. Are you sure you want to open it?`,(Fig3) select "Open" then you can see PLINK or IMPUTE2 commands options show up in Terminal.
+  > When you try to call PLINK or IMPUTE2 with the above commands, you might get a pop-up window with the following message `“plink” cannot be opened because the developer cannot be verified`.(Fig1) Select "Cancel" and we will authorize PLINK and IMPUTE2 first. Please go to macOS "System Settings"->"Privacy & Security", and scroll down until you see a message `"plink" was blocked from use because it is not from an identified developer`.(Fig2) Click "Allow Anyway" and you will be prompt to enter your Mac username and password. Click "Unlock" and then "Allow Anyway" again, and the previous message will disappear. Then try to run the same codes again in RStudio Terminal. You will get another pop-up window saying `macOS cannot verify the developer of “plink”. Are you sure you want to open it?`,(Fig3) select "Open" then you can see PLINK or IMPUTE2 commands options shown up in Terminal.
 
-Fig1. Pop-up window when you try to run program for the first time|  Fig2. Authorize program in System Settings| Fig3. Second pop-up window when you run it again after authorize
+Fig1. Pop-up window when you try to run program for the first time|  Fig2. Authorize program in System Settings| Fig3. Second pop-up window when you run it again after authorization
 :-------------------------:|:-------------------------:|:-------------------------:
 ![pop-up1](./image/popup1.png)  |![auth](./image/auth.png)|  ![popup2](./image/popup2.png)
 
 
 - **For Windows users**: You can **ONLY** run PLINK program codes. 
-  PLINK installation file for Windows can be found in "/bigcare/Tools/PLINK/plink_win64_20230116.zip". Unzip "plink_win64_20230116.zip" with right click->"Extract All..." and a folder "plink_win64_20230116" will be created. The PLINK program file "plink.exe" is within this folder. You can call PLINK program in RStudio Terminal by specifying the absolute path to this "plink.exe" file: `/path/to/bigcare-main/Tools/PLINK/plink_win64_20230116/plink.exe`. An example of codes in RStudio Terminal is as below:
+  PLINK installation file for Windows can be found in "/bigcare-main/Tools/PLINK/plink_win64_20230116.zip". Unzip "plink_win64_20230116.zip" with right click->"Extract All..." and a folder "plink_win64_20230116" will be created.(Double clicking the folder won't unzip it. You have to extract it into an unzipped folder. ) The PLINK program file "plink.exe" is within this folder. You can call PLINK program in RStudio Terminal by specifying the absolute path to this "plink.exe" file: `/path/to/bigcare-main/Tools/PLINK/plink_win64_20230116/plink.exe`. An example of codes in RStudio Terminal is as below:
   ```
   cd /path/to/bigcare-main
   ./Tools/PLINK/plink_win64_20230116/plink.exe --help
   ```
-**Note: Windows users can run PLINK ONLY in RStudio Terminal, but not in Powershell. For other Bash codes, please still use "Windows Powershell" app.**
+**Note: Windows users can run PLINK in RStudio Terminal ONLY, but not in Powershell. For other Bash codes, please still use "Windows Powershell" app.**
 
 
 
